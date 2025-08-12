@@ -1,139 +1,158 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>رزومه دکتر فرزاد احمدی‌پور هدش</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="رزومه و سوابق دکتر فرزاد احمدی پور هدش - مهندس، پژوهشگر، مدیرعامل کارآوند، استاد دانشگاه، متخصص برق قدرت و دیتاسنتر.">
-  <meta name="keywords" content="فرزاد احمدی پور، فرزاد احمدی پور هدش، رزومه فرزاد احمدی پور، رزومه فرزاد احمدی پور هدش، رزومه دکتر فرزاد احمدی پور هدش، دکتر فرزاد احمدی پور، دکتر فرزاد احمدی پور هدش، کارآوند، مدیر عامل کارآوند، استاد دانشگاه تهران شرق، استاد دانشگاه پردیس، farzad ahmadipour, farzad ahmadipour hedesh, dr farzad ahmadipour, dr farzad ahmadipour hedesh, dr farzad ahmadipour resume, dr farzad ahmadipour hedesh resume, حفاظت کاتدیک، کارشناس مرکزداده، دکتری برق قدرت، مهندس برق قدرت، کارشناس مین فریم, Researcher, Engineer, Postdoctoral, Data Center Specialist, Energy Systems, Multi-Energy Microgrids, AI, Machine Learning, z/OS, Iran, Persian">
-  <meta name="author" content="Farzad Ahmadipour Hedeshi">
+  <meta name="description" content="رزومه کامل دکتر فرزاد احمدی‌پور هدش — تحصیلات، سوابق کاری، مقالات، کتاب‌ها، مدارک، و افتخارات.">
   <meta name="robots" content="index, follow">
-
-  <!-- Open Graph Tags (for social sharing & Google) -->
-  <meta property="og:title" content="رزومه دکتر فرزاد احمدی‌پور هدش | Farzad Ahmadipour Resume">
-  <meta property="og:description" content="سوابق علمی، صنعتی و مدیریتی فرزاد احمدی پور در حوزه برق قدرت، حفاظت کاتدیک، مین‌فریم، و مراکز داده.">
-  <meta property="og:url" content="https://farzadahmadipour.github.io/">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="رزومه دکتر فرزاد احمدی‌پور هدش">
+  <meta property="og:description" content="رزومه کامل دکتر فرزاد احمدی‌پور هدش — تحصیلات، سوابق کاری، مقالات، کتاب‌ها، مدارک، و افتخارات.">
   <meta property="og:image" content="https://farzadahmadipour.github.io/profile.jpg">
-
-  <!-- Style -->
   <style>
-    body {
-      font-family: 'Tahoma', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
+    /* تم کلاسیک روشن / فونت مناسب */
+    @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
+
+    :root{
+      --primary:#2a4d69;
+      --muted:#666;
+      --bg:#fbfbfb;
+      --card:#fff;
     }
-    header, footer {
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
+    html,body{height:100%}
+    body{
+      font-family:'Vazir', Tahoma, Arial, sans-serif;
+      margin:0; background:var(--bg); color:#222;
+      line-height:1.7; padding:24px;
+      -webkit-font-smoothing:antialiased;
     }
-    header h1 {
-      margin: 0.5rem 0;
-      font-size: 2rem;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    .section h2 {
-      color: #0b5394;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li::before {
-      content: '\2022';
-      color: #0b5394;
-      display: inline-block;
-      width: 1em;
-      margin-right: 0.5em;
-    }
-    a {
-      color: #0b5394;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .lang-switch {
-      text-align: left;
-      margin-bottom: 1rem;
-    }
+    .container{max-width:980px;margin:0 auto;background:var(--card);box-shadow:0 6px 18px rgba(0,0,0,0.06);border-radius:8px;overflow:hidden}
+    header{padding:28px;text-align:center;background:linear-gradient(90deg,#fff,#f7fbff)}
+    header img{width:150px;height:150px;border-radius:12px;object-fit:cover;border:2px solid #e6eef6}
+    header h1{margin:12px 0 6px;font-size:1.8rem;color:var(--primary)}
+    header p{margin:0;color:var(--muted)}
+    main{padding:28px}
+    .row{display:flex;gap:24px;flex-wrap:wrap}
+    .col{flex:1 1 300px; min-width:260px}
+    section{margin-bottom:22px}
+    h2{color:var(--primary);margin:0 0 8px;font-size:1.05rem;border-bottom:1px solid #eee;padding-bottom:8px}
+    ul{padding-right:18px;margin:8px 0}
+    li{margin:8px 0}
+    a{color:var(--primary)}
+    .download{display:inline-block;margin-top:8px;padding:8px 12px;background:var(--primary);color:#fff;border-radius:6px;text-decoration:none}
+    footer{padding:18px;text-align:center;font-size:0.9rem;color:#777;background:#fafafa;border-top:1px solid #eee}
+    .meta {font-size:0.95rem;color:#333}
+    .small {color:#666;font-size:0.95rem}
+    .links a{display:inline-block;margin-left:8px}
+    pre {white-space:pre-wrap;font-family:inherit}
   </style>
 </head>
 <body>
-  <header>
-    <h1>دکتر فرزاد احمدی‌پور هدش</h1>
-    <p>متخصص برق قدرت، مدرس دانشگاه، کارآفرین</p>
-  </header>
+  <div class="container">
+    <header>
+      <img src="https://farzadahmadipour.github.io/profile.jpg" alt="عکس فرزاد احمدی‌پور هدش" onerror="this.style.display='none'">
+      <h1>دکتر فرزاد احمدی‌پور هدش</h1>
+      <p>مهندس برق قدرت — مدرس دانشگاه — مدیرعامل مؤسسه کارآفرینی کارآوند</p>
+      <div style="margin-top:10px">
+        <a href="./en.html" class="small">View English Version</a>
+      </div>
+    </header>
 
-  <main>
-    <div class="lang-switch">
-      <a href="./en.html">View English Version</a>
-    </div>
+    <main>
+      <!-- CONTACT -->
+      <section>
+        <h2>اطلاعات تماس</h2>
+        <p class="meta">📧 <a href="mailto:farzad_ahmadipour@yahoo.com">farzad_ahmadipour@yahoo.com</a> &nbsp; | &nbsp; 📞 09198885538</p>
+        <p class="small">📍 استان تهران — تهران</p>
+        <p style="margin-top:8px">
+          <a class="download" href="Resume 2025 August.pdf" target="_blank">دانلود رزومه کامل (PDF)</a>
+        </p>
+      </section>
 
-    <div class="section contact">
-      <h2>اطلاعات تماس</h2>
-      <p>📧 farzad_ahmadipour@yahoo.com</p>
-      <p>📞 09198885538</p>
-      <p>📍 تهران، خیابان شریعتی</p>
-      <p><a href="Resume 2025 August" target="_blank">دانلود رزومه PDF</a></p>
-    </div>
+      <!-- EDUCATION -->
+      <section>
+        <h2>تحصیلات</h2>
+        <ul>
+          <li><strong>دکتری مهندسی برق قدرت</strong> — دانشگاه آزاد اسلامی واحد دماوند — ۰۷/۱۳۹۸ تا اکنون — معدل: ۱۹.۰۴</li>
+          <li><strong>کارشناسی ارشد مهندسی برق قدرت</strong> — دانشگاه آزاد اسلامی واحد دماوند — ۰۷/۱۳۹۴ – ۱۱/۱۳۹۵ — معدل: ۱۶.۸۲</li>
+          <li><strong>کارشناسی مهندسی برق قدرت</strong> — دانشگاه آزاد اسلامی واحد دماوند — ۰۷/۱۳۹۰ – ۰۳/۱۳۹۳ — معدل: ۱۳.۲۱</li>
+          <li><strong>کاردانی برق صنعتی</strong> — دانشگاه آزاد اسلامی علی‌آباد کتول — ۰۷/۱۳۸۷ – ۰۳/۱۳۹۰ — معدل: ۱۳</li>
+          <li><strong>دیپلم فنی الکتروتکنیک</strong> — هنرستان شهید چمران — معدل کل: ۱۵/۲۰</li>
+        </ul>
+      </section>
 
-    <div class="section">
-      <h2>تحصیلات</h2>
-      <p>🎓 دکتری برق قدرت، دانشگاه آزاد اسلامی واحد دماوند، معدل ۱۹.۰۴ (۱۳۹۸ تا کنون)</p>
-      <p>🎓 کارشناسی ارشد برق قدرت، دانشگاه آزاد اسلامی دماوند، معدل ۱۶.۸۲</p>
-      <p>🎓 کارشناسی برق قدرت، دانشگاه آزاد اسلامی دماوند، معدل ۱۳.۲۱</p>
-    </div>
+      <!-- WORK EXPERIENCE -->
+      <section>
+        <h2>سوابق کاری (تاریخ‌ها طبق PDF)</h2>
 
-    <div class="section">
-      <h2>سوابق شغلی</h2>
-      <ul>
-        <li>استاد دانشگاه، دانشگاه آزاد اسلامی تهران شرق و پردیس</li>
-        <li>مدیرعامل موسسه کارآفرینی کارآوند</li>
-        <li>کارشناس دیتاسنتر و مین‌فریم، شرکت به‌پرداخت ملت</li>
-        <li>مهندس ارشد برق، شرکت بوم‌شهر و شرکت‌های پیشین</li>
-      </ul>
-    </div>
+        <ul>
+          <li><strong>استاد دانشگاه</strong> — دانشگاه آزاد اسلامی واحد تهران شرق — ۰۶/۱۴۰۲ تا اکنون</li>
+          <li><strong>استاد دانشگاه</strong> — دانشگاه آزاد اسلامی واحد علوم و فناوری پردیس — ۰۶/۱۴۰۲ تا اکنون</li>
+          <li><strong>Peer Reviewer</strong> — Journal of Energy Storage — ۰۴/۱۴۰۴ تا اکنون (داوری مقالات علمی در زمینه ذخیره‌سازی انرژی و انعطاف‌پذیری شبکه)</li>
+          <li><strong>مدیرعامل و رئیس هیئت‌مدیره</strong> — مؤسسه کارآفرینی کارآوند — ۰۲/۱۴۰۰ تا اکنون</li>
+          <li><strong>کارشناس دیتا سنتر (مهارت در مین‌فریم و ذخیره‌سازی داده)</strong> — شرکت به‌پرداخت ملت — ۰۳/۱۴۰۳ تا اکنون</li>
+          <li><strong>مهندس ارشد برق</strong> — شرکت بوم‌شهر — ۰۵/۱۳۹۸ – ۰۸/۱۴۰۳ (طراحی و اجرای تاسیسات برق، سیستم‌های هوشمند، نورپردازی)</li>
+          <li><strong>مهندس ارشد برق</strong> — خانه هوشمند آرتمن — ۰۳/۱۳۹۷ – ۰۴/۱۳۹۸ (طراحی و اجرای سیستم‌های هوشمند)</li>
+          <li><strong>مهندس ارشد برق</strong> — لاوسن وود — ۱۱/۱۳۹۵ – ۰۲/۱۳۹۷ (نورپردازی و تاسیسات اداری/تجاری/مسکونی)</li>
+          <li><strong>مهندس برق</strong> — طراحان آلما — ۰۶/۱۳۹۲ – ۱۰/۱۳۹۵ (اجرای تاسیسات برق)</li>
+        </ul>
+      </section>
 
-    <div class="section skills">
-      <h2>مهارت‌ها</h2>
-      <ul>
-        <li>سیستم‌های هوشمند برق، طراحی روشنایی</li>
-        <li>نصب و اجرای تاسیسات برق و UPS</li>
-        <li>برنامه‌نویسی پایتون، فتوشاپ، ورد، پاورپوینت</li>
-        <li>مدیریت پروژه، تدریس، مذاکره، روابط عمومی</li>
-      </ul>
-    </div>
+      <!-- PUBLICATIONS -->
+      <section>
+        <h2>مقالات و کتاب‌ها</h2>
+        <ul>
+          <li><strong>Coordination of Multi-Energy Microgrids in Power-Gas Networks with high penetration of energy storage systems</strong> — Journal of Energy Storage — ۱۴۰۴/۰۵ (مقاله)</li>
+          <li><strong>حفاظت کاتدیک و ژنراتور ترموالکتریک همراه با خنک‌ساز آمونیاکی</strong> — تألیف/آموزشی — ۰۸/۱۴۰۰ — (کتاب؛ شامل ساخت نمونه اولیه و نمونه پیشرفته؛ نمونه‌ها در مرکز تحقیق دانشگاه آزاد واحد دماوند)</li>
+          <li>نشریه کارآفرینی کارآوند — عضو هیئت تحریریه و مدیر مسئول (چاپ 8 فصلنامه از ۱۴۰۰ تا ۱۴۰۲)</li>
+        </ul>
+      </section>
 
-    <div class="section links">
-      <h2>لینک‌ها</h2>
-      <ul>
-        <li><a href="https://instagram.com/farzad.ahmadipour" target="_blank">Instagram: @farzad.ahmadipour</a></li>
-        <li><a href="https://instagram.com/kar.avand" target="_blank">Instagram: @kar.avand</a></li>
-        <li><a href="https://twitter.com/farzadahmadpour" target="_blank">Twitter: @farzadahmadpour</a></li>
-        <li><a href="https://ir.linkedin.com/in/farzad-ahmadipour-hedesh-73918051" target="_blank">LinkedIn</a></li>
-      </ul>
-    </div>
-  </main>
+      <!-- CERTIFICATES & HONORS -->
+      <section>
+        <h2>مدارک، گواهینامه‌ها و افتخارات</h2>
+        <ul>
+          <li>داور مقالات علمی و پژوهشی — Journal of Energy Storage — از ۰۴/۱۴۰۴ (بدون انقضاء). ISSN: 2352-152X</li>
+          <li>مجوز مؤسسه فرهنگی و هنری — ۰۴/۱۴۰۳ – ۰۶/۱۴۰۶ (وزارت فرهنگ و ارشاد اسلامی)</li>
+          <li>گواهی رتبه اول کشوری در دومین جشنواره رشد — ۰۷/۱۴۰۱ — دانشگاه آزاد اسلامی</li>
+          <li>گواهی داوری سومین دوره «کرس‌های آزاد اندیش» دانشگاه آزاد — ۰۶/۱۴۰۲</li>
+          <li>ساخت ژنراتور ترموالکتریک همراه با خنک‌ساز آمونیاکی جهت حفاظت کاتدیک — ایده، طرح و ساخت نمونه اولیه و پیشرفته — دانشگاه آزاد اسلامی واحد دماوند</li>
+          <li>گواهی آزمون جامع دکتری (Ph.D) — ۰۳/۱۴۰۰ — دانشگاه آزاد اسلامی واحد دماوند</li>
+          <li>مدارک کارشناسی ارشد/کارشناسی/کاردانی — با شماره‌های سریال و اطلاعات ثبت شده در سازمان دانشگاه آزاد (مشخصات کامل در PDF)</li>
+          <li>گواهینامه‌ها و دوره‌های متعدد آموزشی (فتوشاپ، پایتون، وبینارهای بین‌المللی، قراردادنویسی، حسابداری حقوق و دستمزد و... — جزئیات در PDF)</li>
+          <li>گواهی «ایمنی عمومی و صنعتی در برق» — Quality Certification Bureau Italia s.r.l (Serial موجود در PDF)</li>
+          <!-- در صورت تمایل می‌توان این لیست را با شماره‌ها و لینک‌های مستند (از PDF) کامل‌تر کرد -->
+        </ul>
+      </section>
 
-  <footer>
-    &copy; 2025 فرزاد احمدی‌پور هدش. تمام حقوق محفوظ است.
-  </footer>
+      <!-- ACTIVITIES & SERVICE -->
+      <section>
+        <h2>فعالیت‌ها و مسئولیت‌های اجرایی</h2>
+        <ul>
+          <li>عضو اصلی شورای مرکزی ناظر بر نشریات کل دانشگاه آزاد (۱۴۰۲–۱۴۰۳)</li>
+          <li>عضو اصلی کمیته ناظر بر نشریات دانشگاه، عضو شورای تعامل دانشجو و دانشگاه، عضو هیئت تحریریه نشریه کارآوند</li>
+          <li>مجری و مسئول برگزاری بیش از ۲۹ دوره وبینار و سمینار مهارت‌آموزی (۱۴۰۰–۱۴۰۲)</li>
+          <li>مجری برنامه‌ها و نمایشگاه‌های کارآفرینی و صنایع دستی (چندین دوره)</li>
+          <li>سایر مسئولیت‌های اجرایی و مشاوره‌ای ذکرشده در PDF</li>
+        </ul>
+      </section>
+
+      <!-- LINKS -->
+      <section>
+        <h2>لینک‌ها و نمونه‌کارها</h2>
+        <div class="links">
+          <a href="https://farzadahmadipour.github.io/" target="_blank">سایت شخصی</a> |
+          <a href="https://ir.linkedin.com/in/farzad-ahmadipour-hedesh-73918051" target="_blank">LinkedIn</a> |
+          <a href="https://www.researchgate.net/profile/Farzad-Ahmadipour-Hedesh" target="_blank">ResearchGate</a> |
+          <a href="https://orcid.org/0009-0003-4084-4152" target="_blank">ORCID</a> |
+          <a href="https://www.instagram.com/farzad.ahmadipour/" target="_blank">Instagram</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 دکتر فرزاد احمدی‌پور هدش — تمام حقوق محفوظ است.
+    </footer>
+  </div>
 </body>
 </html>
