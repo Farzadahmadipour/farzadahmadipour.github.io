@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://farzadahmadipour.github.io/sitemap.xml
