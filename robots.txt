@@ -1,7 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://farzadahmadipour.github.io/sitemap.xml
-
-# جلوگیری از دسترسی به فایل‌های حساس (اگر داشتی)
-Disallow: /private/
-Disallow: /tmp/
