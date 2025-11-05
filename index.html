@@ -92,6 +92,94 @@ main, header, footer {
   width: 100%;
   box-sizing: border-box;
 }
+    /* --- UI/UX Professional Upgrade (by ChatGPT) --- */
+
+/* پس‌زمینه با تصویر تار از سیستم‌های هوشمند (BMS) */
+body {
+  background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80')
+              no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  color: #222;
+  font-family: 'Vazir', Tahoma, sans-serif;
+}
+
+/* لایه نیمه‌شفاف روی پس‌زمینه برای خوانایی بیشتر متن */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.82);
+  z-index: -1;
+}
+
+/* افکت کارت تمیزتر و حرفه‌ای‌تر برای محتوا */
+.container {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* افکت hover نرم */
+.container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+/* تیترهای اصلی */
+h2 {
+  color: #153E75;
+  border-bottom: 2px solid #e1e5ea;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
+/* لینک‌ها با افکت مدرن */
+a {
+  color: #1c5ed6;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #153E75;
+  text-decoration: underline;
+}
+
+/* دکمه رزومه */
+.download {
+  background: linear-gradient(90deg, #1c5ed6, #153E75);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.download:hover {
+  background: linear-gradient(90deg, #153E75, #1c5ed6);
+  transform: translateY(-1px);
+}
+
+/* هدر با افکت گرادیان و سایه ظریف */
+header {
+  background: linear-gradient(135deg, #153E75, #1c5ed6);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* فوتر ساده‌تر و رسمی‌تر */
+footer {
+  background: rgba(245,245,245,0.95);
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+/* واکنش‌گرایی برای موبایل */
+@media (max-width: 768px) {
+  header img { width: 120px; height: 120px; }
+  main { padding: 16px; }
+  h2 { font-size: 1.1rem; }
+  body::before { background: rgba(255,255,255,0.9); }
+}
   </style>
 </head>
 <body>
