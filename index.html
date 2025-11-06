@@ -173,7 +173,9 @@ footer {
   border-top: 1px solid #ddd;
 }
 
-/* --- Responsive Design for Mobile View --- */
+/* ---------------------- */
+/* Responsive Design — Mobile View */
+/* ---------------------- */
 @media screen and (max-width: 768px) {
   body {
     font-size: 15px;
@@ -186,7 +188,6 @@ footer {
     align-items: flex-start;
   }
 
-  /* پنهان کردن منو تا زمانی که دکمه همبرگر زده نشود */
   nav ul {
     display: none;
     flex-direction: column;
@@ -194,12 +195,14 @@ footer {
     background: #222;
   }
 
-  /* نمایش منو بعد از کلیک روی دکمه همبرگر */
   nav ul.show {
     display: flex;
   }
 
-  /* استایل دکمه همبرگر */
+  nav ul li {
+    margin: 10px 0;
+  }
+
   .menu-toggle {
     display: block;
     cursor: pointer;
@@ -230,26 +233,6 @@ footer {
   <img src="https://farzadahmadipour.github.io/profile.jpg" alt="فرزاد احمدی پور هدش">
   <h1>دکتر فرزاد احمدی‌پور هدش</h1>
   <p>دکتری مهندسی برق قدرت، مدرس دانشگاه، داور مقالات علمی ژورنال انرژی، مدیرعامل مؤسسه کارآفرینی کارآوند</p>
-  <div style="margin-top:10px"><a href="./en.html" style="color:#fff">View English Version</a></div>
-  
-   <!-- دکمه همبرگر برای منوی موبایل -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-  <div class="menu-container">
-    <nav>
-      <ul id="nav-menu">
-        <li><a href="#contact">تماس</a></li>
-        <li><a href="#edu">تحصیلات</a></li>
-        <li><a href="#jobs">سوابق</a></li>
-        <li><a href="#courses">تدریس</a></li>
-        <li><a href="#papers">مقالات</a></li>
-        <li><a href="#awards">افتخارات</a></li>
-        <li><a href="#iau">دانشگاه</a></li>
-        <li><a href="#links">لینک‌ها</a></li>
-      </ul>
-    </nav>
-  </div>
-
   <div style="margin-top:10px"><a href="./en.html" style="color:#fff">View English Version</a></div>
 </header>
 
@@ -393,13 +376,5 @@ footer {
   تمامی حقوق وبسایت متعلق به دکتر فرزاد احمدی‌پور هدش می‌باشد و محفوظ است.
 </footer>
 </div>
-  <script>
-  function toggleMenu() {
-    const menu = document.getElementById('nav-menu');
-    menu.classList.toggle('show');
-  }
-</script>
 </body>
 </html>
-
-
