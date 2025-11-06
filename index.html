@@ -72,7 +72,6 @@
     .download{display:inline-block;margin-top:8px;padding:8px 12px;background:#2a4d69;color:#fff;border-radius:6px}
     footer{text-align:center;padding:18px;font-size:0.9rem;color:#777;background:#f1f1f1;border-top:1px solid #ddd}
     .links a{margin-left:8px}
-
     /* --- Fullscreen Layout Override --- */
 html, body {
   width: 100%;
@@ -80,6 +79,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 .container {
   width: 100%;
   max-width: none !important;
@@ -87,12 +87,14 @@ html, body {
   box-shadow: none !important;
   margin: 0 !important;
 }
+
 main, header, footer {
   width: 100%;
   box-sizing: border-box;
 }
+    /* --- UI/UX Professional Upgrade (by ChatGPT) --- */
 
-/* --- UI/UX Upgrade --- */
+/* پس‌زمینه با تصویر تار از سیستم‌های هوشمند (BMS) */
 body {
   background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80')
               no-repeat center center fixed;
@@ -100,7 +102,10 @@ body {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   color: #222;
+  font-family: 'Vazir', Tahoma, sans-serif;
 }
+
+/* لایه نیمه‌شفاف روی پس‌زمینه برای خوانایی بیشتر متن */
 body::before {
   content: "";
   position: fixed;
@@ -110,7 +115,72 @@ body::before {
   z-index: -1;
 }
 
-/* --- Fixed Navigation Bar --- */
+/* افکت کارت تمیزتر و حرفه‌ای‌تر برای محتوا */
+.container {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* افکت hover نرم */
+.container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+/* تیترهای اصلی */
+h2 {
+  color: #153E75;
+  border-bottom: 2px solid #e1e5ea;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
+/* لینک‌ها با افکت مدرن */
+a {
+  color: #1c5ed6;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #153E75;
+  text-decoration: underline;
+}
+
+/* دکمه رزومه */
+.download {
+  background: linear-gradient(90deg, #1c5ed6, #153E75);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.download:hover {
+  background: linear-gradient(90deg, #153E75, #1c5ed6);
+  transform: translateY(-1px);
+}
+
+/* هدر با افکت گرادیان و سایه ظریف */
+header {
+  background: linear-gradient(135deg, #153E75, #1c5ed6);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* فوتر ساده‌تر و رسمی‌تر */
+footer {
+  background: rgba(245,245,245,0.95);
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+/* واکنش‌گرایی برای موبایل */
+@media (max-width: 768px) {
+  header img { width: 120px; height: 120px; }
+  main { padding: 16px; }
+  h2 { font-size: 1.1rem; }
+  body::before { background: rgba(255,255,255,0.9); }
+}
+    /* 🔹 Fixed Navigation Bar */
 .navbar {
   position: fixed;
   top: 0;
@@ -141,19 +211,7 @@ body::before {
 .navbar a:hover {
   color: #ffd700;
 }
-body {
-  padding-top: 60px;
-}
-
-/* فوتر ساده‌تر و رسمی‌تر */
-footer {
-  background: rgba(245,245,245,0.95);
-  font-size: 0.9rem;
-  color: #555;
-  border-top: 1px solid #ddd;
-}
-
-/* واکنش‌گرایی */
+body {padding-top: 60px;}
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
@@ -162,21 +220,20 @@ footer {
 }
   </style>
 </head>
-
 <body>
-  <!-- ✅ منوی ثابت -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#contact">تماس</a></li>
-      <li><a href="#edu">تحصیلات</a></li>
-      <li><a href="#jobs">سوابق</a></li>
-      <li><a href="#papers">مقالات</a></li>
-      <li><a href="#awards">افتخارات</a></li>
-      <li><a href="#iau">دانشگاه آزاد اسلامی</a></li>
-      <li><a href="#links">لینک‌ها</a></li>
-    </ul>
-  </nav>
-
+  <!-- 🔹 Fixed Navigation Bar -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#contact">تماس</a></li>
+    <li><a href="#edu">تحصیلات</a></li>
+    <li><a href="#jobs">سوابق</a></li>
+    <li><a href="#courses">دروس</a></li>
+    <li><a href="#papers">مقالات</a></li>
+    <li><a href="#awards">افتخارات</a></li>
+    <li><a href="#iau">دانشگاه آزاد</a></li>
+    <li><a href="#links">لینک‌ها</a></li>
+  </ul>
+</nav>
 <div class="container">
 <header>
   <img src="https://farzadahmadipour.github.io/profile.jpg" alt="فرزاد احمدی پور هدش">
@@ -186,14 +243,14 @@ footer {
 </header>
 
 <main>
-<section id="contact">
+<section>
   <h2>اطلاعات تماس</h2>
   <p>📞📧 <a href="mailto:farzad_ahmadipour@yahoo.com">farzad_ahmadipour@yahoo.com</a> |  09198885538</p>
   <p>📍 ایران، تهران</p>
   <p><a class="download" href="Resume 2025 August.pdf" target="_blank">دانلود رزومه کامل (PDF)</a></p>
 </section>
 
-<section id="edu">
+<section>
   <h2>تحصیلات</h2>
   <ul>
     <li>دکتری مهندسی برق قدرت / دانشگاه آزاد اسلامی واحد دماوند</li>
@@ -204,33 +261,117 @@ footer {
   </ul>
 </section>
 
-<section id="jobs">
+<section>
   <h2>سوابق شغلی</h2>
-  ...
+  <ul>
+    <li>استاد دانشگاه / دانشگاه آزاد اسلامی واحد تهران شرق‌(فعال)</li>
+    <li>استاد دانشگاه / دانشگاه آزاد اسلامی واحد علوم و فناوری پردیس(فعال)</li>
+    <li>داور مقالات علمی / Journal of Energy Storage(فعال)</li>
+    <li>مدیرعامل و رئیس هیئت‌مدیره / مؤسسه کارآفرینی کارآوند(فعال)</li>
+    <li>کارشناس مرکز داده (مین‌فریم و ذخیره‌سازی داده) / شرکت به‌پرداخت ملت(فعال)</li>
+    <li>مهندس ارشد برق / شرکت بوم‌شهر(فعال-پروژه‌ای)</li>
+    <li>مهندس ارشد برق / خانه هوشمند آرتمن</li>
+    <li>مهندس ارشد برق / لاوسن وود</li>
+    <li>مهندس برق / طراحان آلما</li>
+  </ul>
 </section>
 
-<section id="papers">
+<section>
+  <h2>دروس تدریسی در دانشگاه آزاد اسلامی</h2>
+  <ul>
+    <li>شبکه‌های هوشمند برق</li>
+    <li>تجهیزات پست و نیروگاه</li>
+    <li>بررسی سیستم‌های انرژی الکتریکی یک</li>
+    <li>عایق‌ها و فشارقوی</li>
+    <li>تحلیل سیستم‌های انرژی الکتریکی یک</li>
+    <li>تولید انرژی الکتریکی</li>
+    <li>مدیریت مصرف انرژی الکتریکی</li>
+    <li>روشنایی فنی</li>
+    <li>ایمنی در برق</li>
+    <li>کارگاه اتوماسیون صنعتی</li>
+    <li>آشنایی با شبکه‌های هوشمند برق</li>
+    <li>مبانی تحقیق در عملیات</li>
+    <li>مدیریت توزیع مصرف برق</li>
+    <li>ریاضی عمومی یک</li>
+  </ul>
+</section>
+
+<section>
   <h2>مقالات و کتاب‌ها</h2>
-  ...
+  <ul>
+    <li>Coordination of Multi-Energy Microgrids in Power-Gas Networks with high penetration of energy storage systems / Journal of Energy Storage</li>
+    <li>حفاظت کاتدیک و ژنراتور ترموالکتریک همراه با خنک‌ساز آمونیاکی / کتاب (آموزش تالیفی؛ مبتنی بر ساخت نمونه اولیه و پیشرفته) / <a href="https://www.gisoom.com/book/11755968/" target="_blank">gisoom.com</a></li>
+    <li>نشریه کارآفرینی کارآوند / سازمان دانشگاه آزاد اسلامی / مدیرمسئول و عضو هیئت تحریریه / <a href="https://stumag.iau.ir/publications/1980/" target="_blank">stumag.iau.ir</a></li>
+  </ul>
 </section>
-
-<section id="awards">
+  
+<section>
   <h2>مدارک، گواهینامه‌ها و افتخارات</h2>
-  ...
+  <ul>
+    <li>داور مقالات علمی و پژوهشی / Journal of Energy Storage — ISSN: 2352-152X / <a href="https://portal.issn.org/resource/ISSN/2352-152X" target="_blank">ISSN Portal</a></li>
+    <li>مجوز مؤسسه فرهنگی و هنری / وزارت فرهنگ و ارشاد اسلامی / <a href="https://qr.mojavez.ir/track/2898065" target="_blank">qr.mojavez.ir</a></li>
+    <li>کسب رتبه اول کشوری در جشنواره سراسری رشد / دانشگاه آزاد اسلامی / <a href="https://damavand.iau.ir/karavand/fa/news/5216" target="_blank">خبر</a></li>
+    <li>گواهی داوری سومین دوره کرسی‌های آزاداندیشی دانشگاه آزاد اسلامی</li>
+    <li>ساخت ژنراتور ترموالکتریک همراه با خنک‌ساز آمونیاکی جهت حفاظت کاتدیک / دانشگاه آزاد اسلامی واحد دماوند</li>
+    <li>گواهی آزمون جامع دکتری تخصصی (Ph.D) / دانشگاه آزاد اسلامی واحد دماوند / شماره 402/250/801</li>
+    <li>مدرک کارشناسی ارشد مهندسی برق / سازمان دانشگاه آزاد اسلامی / شماره 169534501556</li>
+    <li>مدرک کارشناسی مهندسی برق / سازمان دانشگاه آزاد اسلامی / شماره 139334500957</li>
+    <li>مدرک کاردانی برق صنعتی / سازمان دانشگاه آزاد اسلامی / شماره 139018400265</li>
+    <li>مدرک دیپلم فنی الکتروتکنیک / هنرستان فنی شهید چمران</li>
+    <li>گواهینامه پایان دوره کارآموزی / اداره کل آموزش و پرورش تهران (فنی و حرفه‌ای) / نصب و راه‌اندازی تابلوهای برق صنعتی، کنتوری و بانک خازنی</li>
+    <li>ایمنی عمومی و صنعتی در برق / Quality Certification Bureau Italia s.r.l / SN: FA-17-03-21-6133</li>
+    <li>هوشمندسازی سیستم‌های برق / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>تکنولوژی و فناوری‌های بازار کسب‌وکار برق / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>وبینار بین‌المللی نوآوری انرژی آینده انرژی‌های تجدیدپذیر / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>تکنولوژی برنامه‌نویسی پایتون / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>مقدمات قرارداد نویسی / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>حسابداری حقوق و دستمزد / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>فتوشاپ مقدماتی / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>دوره تخصصی فتوشاپ / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>فتوشاپ تخصصی «فتومونتاژ» / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>ویراستاری نشریات مقدماتی / دانشگاه آزاد اسلامی واحد دماوند / دو گواهی / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>فناوری تولید و پرورش قارچ‌های خوراکی / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>موفقیت در بازار کسب‌وکار معماری / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>مهندسی عمران و بازار کسب‌وکار / دانشگاه آزاد اسلامی واحد دماوند / <a href="https://damavand.iau.ir/karavand/fa/news/5615" target="_blank">ارجاع</a></li>
+    <li>مجری رویداد مصاحبه با کارآفرینان برتر کشور / دانشگاه آزاد اسلامی واحد دماوند / شامل ۷ گواهی / <a href="https://damavand.iau.ir/karavand/fa/news/5616" target="_blank">ارجاع</a></li>
+  </ul>
 </section>
 
-<section id="iau">
+<section>
   <h2>عناوین و سوابق اجرایی در دانشگاه آزاد</h2>
-  ...
+  <ul>
+    <li>عضو اصلی شورای مرکزی ناظر بر نشریات کل سازمان دانشگاه آزاد اسلامی</li>
+    <li>داور مرحله استانی و کشوری کرسی‌های آزاداندیشی سازمان دانشگاه آزاد اسلامی</li>
+    <li>دبیر کانون کارآفرینی کارآوند / واحد دماوند</li>
+    <li>مدیر مسئول نشریه کارآوند / واحد دماوند</li>
+    <li>عضو اصلی کمیته ناظر بر نشریات دانشگاه / واحد دماوند</li>
+    <li>عضو اصلی شورای تعامل دانشجو و دانشگاه / واحد دماوند</li>
+    <li>عضو اصلی شورای مرکزی کانون عکس و رسانه / واحد دماوند</li>
+    <li>عضو هیئت تحریریه نشریه کارآوند / واحد دماوند</li>
+    <li>دبیر کانون مهارت‌آموزی مهندسی برق / واحد دماوند</li>
+    <li>مجری نمایشگاه صنایع دستی و کارآفرینی بهاره کارآوند / واحد دماوند</li>
+    <li>مجری نمایشگاه صنایع دستی و کارآفرینی پاییزه کارآوند / واحد دماوند</li>
+    <li>مجری ۲۹ دوره وبینار و سمینار مهارت‌آموزی در موضوعات مختلف / واحد دماوند</li>
+    <li>مجری مراسم نودانشجویان / واحد دماوند</li>
+    <li>مجری اختتامیه جشنواره کشوری امامت و مهدویت (عکس هدایت) / واحد دماوند</li>
+    <li>مجری جشن فارغ‌التحصیلی دانشجویان پرستاری / واحد دماوند</li>
+    <li>مشاور تیم روشن‌اندیشان (محور اجتماعی) در کرسی‌های آزاداندیشی / واحد دماوند</li>
+    <li>مجری گفت‌وگوی زنده با کارآفرینان برتر کشور / واحد دماوند</li>
+    <li>حضور در رویداد ملی عصر امید (صنایع خلاق فرهنگی) / واحد دماوند</li>
+  </ul>
 </section>
 
-<section id="links">
+<section>
   <h2>لینک‌ها</h2>
   <div class="links">
     <a href="https://ror.org/0516eyx49" target="_blank">ROR</a> |
     <a href="https://damavand.iau.ir/karavand" target="_blank">کارآوند</a> |
+    <a href="https://farzadahmadipour.github.io/" target="_blank">سایت شخصی</a> |
     <a href="https://orcid.org/0009-0003-4084-4152" target="_blank">ORCID</a> |
-    <a href="https://www.linkedin.com/in/farzad-ahmadipour-hedesh/" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/kar.avand/" target="_blank">Instagram (Karavand)</a> |
+    <a href="https://www.instagram.com/farzad.ahmadipour/" target="_blank">Instagram (Personal)</a> |
+    <a href="https://www.linkedin.com/in/farzad-ahmadipour-hedesh/" target="_blank">LinkedIn</a> |
+    <a href="https://www.researchgate.net/profile/Farzad-Ahmadipour-Hedesh" target="_blank">ResearchGate</a>
   </div>
 </section>
 </main>
@@ -241,3 +382,5 @@ footer {
 </div>
 </body>
 </html>
+
+
