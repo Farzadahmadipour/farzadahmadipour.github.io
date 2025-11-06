@@ -1,0 +1,98 @@
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+h1, h2 {
+  margin: 0.5rem 0;
+}
+
+nav {
+  background: #2a5298;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  display: block;
+}
+
+nav a:hover {
+  background: #1e3c72;
+}
+
+section {
+  background: white;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+ul {
+  padding-right: 1.5rem;
+}
+
+.btn {
+  background: #2a5298;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  background: #1e3c72;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ریسپانسیو موبایل */
+.menu-toggle {
+  display: none;
+  background: #fff;
+  color: #2a5298;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
