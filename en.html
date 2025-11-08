@@ -88,24 +88,19 @@
   <link rel="icon" type="image/png" href="https://farzadahmadipour.github.io/profile.jpg">
 
 <style>
-/* -------------------- General Body -------------------- */
 html, body {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     font-family: Arial, Tahoma, sans-serif;
     direction: ltr;
     color: #222;
     line-height: 1.8;
-    font-weight: normal;
     background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
     background-size: cover;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Overlay */
@@ -119,26 +114,19 @@ body::before {
     z-index: -1;
 }
 
-/* -------------------- Container -------------------- */
+/* Container */
 .container {
-    width: 100%;         /* پر کردن کل عرض صفحه */
-    margin: 0;           /* چسبیدن به کناره‌ها */
+    max-width: 980px;
+    width: 100%;
+    margin: auto;
     background: rgba(255,255,255,0.9);
     border-radius: 12px;
     box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    overflow: visible;
+    padding-bottom: 20px;
 }
 
-.container:hover { 
-    transform: translateY(-2px); 
-    box-shadow: 0 10px 28px rgba(0,0,0,0.12); 
-}
-
-/* -------------------- Header -------------------- */
+/* Header */
 header {
     text-align: center;
     padding: 28px;
@@ -146,113 +134,40 @@ header {
     color: #fff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
-header img { 
-    width: 150px; 
-    height: 150px; 
-    border-radius: 12px; 
-    object-fit: cover; 
-    border: 3px solid #fff; 
-}
-
-header h1 { 
-    margin: 12px 0 6px; 
-    color: #f4e04d; 
-}
-
+header img { width: 150px; height: 150px; border-radius: 12px; object-fit: cover; border: 3px solid #fff; }
+header h1 { margin: 12px 0 6px; color: #f4e04d; font-family: Arial, Tahoma, sans-serif; }
 header p { margin: 0; font-size: 1rem; }
 
-/* -------------------- Main Content -------------------- */
-main { 
-    padding: 28px; 
-    flex: 1; /* پر کردن ارتفاع باقی مانده */
-}
-
-h2 { 
-    color: #153E75; 
-    border-bottom: 2px solid #e1e5ea; 
-    padding-bottom: 8px; 
-    font-weight: bold; 
-    font-size: 1.3rem;
-}
-
+/* Main */
+main { padding: 28px; overflow: visible; }
+h2 { color: #153E75; border-bottom: 2px solid #e1e5ea; padding-bottom: 8px; font-weight: bold; font-size: 1.3rem; }
 ul { padding-left: 18px; margin: 8px 0; }
 li { margin: 8px 0; }
-p, li { font-size: 1rem; }
 
-/* -------------------- Links & Buttons -------------------- */
-a { color: #1c5ed6; text-decoration: none; transition: color 0.3s ease; }
+/* Links & Buttons */
+a { color: #1c5ed6; text-decoration: none; }
 a:hover { color: #153E75; text-decoration: underline; }
+.download, .links a {
+    display: inline-block; margin: 4px 6px; padding: 6px 10px;
+    background: linear-gradient(90deg, #1c5ed6, #153E75); color: white; border-radius: 6px; font-size: 0.85rem;
+}
+.download:hover, .links a:hover { background: linear-gradient(90deg, #153E75, #1c5ed6); }
 
-.download { 
-    display: inline-block; 
-    margin-top: 8px; 
-    padding: 8px 12px; 
-    background: linear-gradient(90deg, #1c5ed6, #153E75); 
-    color: white; 
-    border-radius: 6px; 
-    transition: all 0.3s ease; 
-}
-.download:hover { 
-    background: linear-gradient(90deg, #153E75, #1c5ed6); 
-    transform: translateY(-1px); 
-}
+/* Footer */
+footer { text-align: center; padding: 18px; font-size: 0.9rem; color: #555; background: rgba(245,245,245,0.95); border-top: 1px solid #ddd; }
 
-.links a { 
-    display: inline-block; 
-    margin: 4px 6px; 
-    padding: 6px 10px; 
-    background: linear-gradient(90deg, #1c5ed6, #153E75); 
-    color: white; 
-    border-radius: 6px; 
-    text-decoration: none; 
-    font-size: 0.85rem; 
-    transition: all 0.3s ease; 
-}
-.links a:hover { 
-    background: linear-gradient(90deg, #153E75, #1c5ed6); 
-    transform: translateY(-1px); 
-    color: white; 
-}
-.links { text-align: center; margin-top: 12px; }
-
-/* -------------------- Footer -------------------- */
-footer { 
-    text-align: center; 
-    padding: 18px; 
-    font-size: 0.9rem; 
-    color: #555; 
-    background: rgba(245,245,245,0.95); 
-    border-top: 1px solid #ddd; 
-}
-
-/* -------------------- Fixed Navigation Bar -------------------- */
-.navbar { 
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    background: linear-gradient(135deg, #153E75, #1c5ed6); 
-    color: white; 
-    z-index: 1000; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    padding: 10px 0; 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
-}
-
+/* Navbar */
+.navbar { position: fixed; top: 0; width: 100%; background: linear-gradient(135deg, #153E75, #1c5ed6); color: white; z-index: 1000; display: flex; justify-content: center; padding: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
 .navbar ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
-.navbar a { color: white; font-weight: 600; text-decoration: none; transition: color 0.3s ease; }
+.navbar a { color: white; font-weight: 600; text-decoration: none; }
 .navbar a:hover { color: #ffd700; }
-body { padding-top: 50px; }
+body { padding-top: 60px; }
 
-/* -------------------- Mobile Navbar -------------------- */
+/* Mobile Navbar */
 @media (max-width: 768px) {
     header img { width: 120px; height: 120px; }
     main { padding: 16px; }
     h2 { font-size: 1.2rem; }
-    body::before { background: rgba(255,255,255,0.9); }
-
     .navbar ul { flex-direction: column; gap: 8px; display: none; margin-top: 10px; }
     .navbar { flex-direction: column; background: rgba(21,62,117,0.95); padding: 15px 0; }
     .nav-toggle { display: block; background: transparent; border: none; cursor: pointer; padding: 8px; margin-left: 12px; }
