@@ -88,18 +88,37 @@
   <link rel="icon" type="image/png" href="https://farzadahmadipour.github.io/profile.jpg">
 
   <!-- Font & Style -->
-  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+  <link href="https://cdn.fontcdn.ir/Font/Persian/IranSans/iran-sans.css" rel="stylesheet" type="text/css" />
   <style>
     body {
-      font-family: "Vazirmatn", sans-serif;
-      direction: rtl;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background-color: #fff;
-      color: #222;
+  font-family: 'IRANSans', Tahoma, sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.8;
+  font-weight: normal;
+    }  
+
+ @media (max-width: 768px) {
+    body {
+      font-family: 'IRANSans', Tahoma, sans-serif; /* همان فونت برای موبایل */
+      font-weight: 300; /* سبک‌تر برای خوانایی بهتر در گوشی */
+      line-height: 1.9;
     }
-  
+
+    h1, h2, h3, h4, h5 {
+      font-weight: 500; /* عنوان‌ها کمی پررنگ‌تر شوند */
+    }
+
+    nav a {
+      font-weight: 400;
+      font-size: 15px; /* اندازه منو در موبایل کمی کوچکتر */
+    }
+  }
+    
       /* افزایش فاصله بین بخش‌ها برای خوانایی بهتر */
 main section {
   margin-bottom: 32px;
@@ -111,8 +130,6 @@ main section {
     padding-right: 12px;
   }
 }
-    @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
-    body{font-family:'Vazir',Tahoma,sans-serif;margin:0;background:#f8f9fa;color:#222;line-height:1.7}
     .container{max-width:980px;margin:auto;background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06);overflow:hidden}
     header{text-align:center;padding:28px;background:#2a4d69;color:#fff}
     header img{width:150px;height:150px;border-radius:12px;object-fit:cover;border:3px solid #fff}
@@ -160,7 +177,7 @@ body {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   color: #222;
-  font-family: 'Vazir', Tahoma, sans-serif;
+  font-family: 'IRANSans', Tahoma, sans-serif;
 }
 
 /* لایه نیمه‌شفاف روی پس‌زمینه برای خوانایی بیشتر متن */
