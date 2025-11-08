@@ -225,8 +225,21 @@ footer {
 }
 
 .links a {
-  margin-left: 8px;
-  font-family: 'IRANSans', Tahoma, sans-serif;
+  display: inline-block;
+  margin: 4px 6px; /* فاصله بین دکمه‌ها */
+  padding: 6px 10px; /* سایز کوچکتر نسبت به دکمه رزومه */
+  background: linear-gradient(90deg, #1c5ed6, #153E75);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem; /* کوچکتر از دکمه رزومه */
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  background: linear-gradient(90deg, #153E75, #1c5ed6);
+  transform: translateY(-1px);
+  color: white;
 }
 
     /* --- Fullscreen Layout Override --- */
