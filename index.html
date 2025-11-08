@@ -621,7 +621,7 @@ body {padding-top: 30px;}
 
 <footer>
   تمامی حقوق وبسایت متعلق به دکتر فرزاد احمدی‌پور هدش می‌باشد و محفوظ است.<br>
-  طراحی و توسعه توسط در سال 1404
+  طراحی و توسعه در سال 1404
 </footer>
 </div>
   <script>
@@ -652,7 +652,17 @@ body {padding-top: 30px;}
       });
     });
   })();
+    
+</script>
+  <script>
+// تابع تبدیل اعداد انگلیسی به فارسی
+function toPersianNumbers(str) {
+  const persianNumbers = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+  return str.replace(/\d/g, d => persianNumbers[d]);
+}
+
+// تبدیل تمام متن‌های موجود در صفحه
+document.body.innerHTML = toPersianNumbers(document.body.innerHTML);
 </script>
 </body>
 </html>
-
