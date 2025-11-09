@@ -444,14 +444,14 @@ body {padding-top: 30px;}
 
 /* Mobile behaviour: show button & stack menu */
 @media (max-width: 768px) {
-  @media (max-width: 768px) {
   .nav-toggle { display: block; }
-  .navbar ul { display: none; flex-direction: column; gap: 12px; margin-top: 10px; }
-  .navbar.open ul { display: flex; }
-}
-  .navbar.open ul {
-    display: flex;
+  .navbar ul { 
+    display: none; 
+    flex-direction: column; 
+    gap: 12px; 
+    margin-top: 10px; 
   }
+  .navbar.open ul { display: flex; }
 }
   </style>
 </head>
@@ -653,6 +653,14 @@ body {padding-top: 30px;}
     });
   })();
     
+</script>
+  <script>
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  const navbar = document.querySelector('.navbar');
+  const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+  this.setAttribute('aria-expanded', !expanded);
+  navbar.classList.toggle('open');
+});
 </script>
 </body>
 </html>
