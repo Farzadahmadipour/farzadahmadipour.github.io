@@ -453,6 +453,20 @@ body {padding-top: 30px;}
   }
   .navbar.open ul { display: flex; }
 }
+
+  /* ساعت ثابت پایین سمت چپ */
+.clock {
+  position: fixed;  /* ثابت روی صفحه */
+  bottom: 10px;     /* فاصله از پایین */
+  left: 10px;       /* سمت چپ */
+  background: rgba(21,62,117,0.9);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: 'IRANSans', Tahoma, sans-serif;
+  font-size: 14px;
+  z-index: 9999;    /* همیشه روی بقیه عناصر */
+}
   </style>
 </head>
 <body>
@@ -623,23 +637,10 @@ body {padding-top: 30px;}
   تمامی حقوق وبسایت متعلق به دکتر فرزاد احمدی‌پور هدش می‌باشد و محفوظ است.<br>
   طراحی و توسعه در سال 1404
 </footer>
-  
- <!-- 🕒 ساعت و تاریخ ثابت پایین چپ -->
-<div id="clock" class="clock"></div>
 
-<script>
-// 🕒 JS ساعت و تاریخ ثابت
-function updateClock() {
-  const now = new Date();
-  const date = now.toLocaleDateString('fa-IR');
-  const time = now.toLocaleTimeString('fa-IR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-  document.getElementById('clock').innerHTML = `${date} - ${time}`;
-}
-setInterval(updateClock, 1000);
-updateClock();
-</script>
+<!-- ساعت و تاریخ ثابت فارسی -->
+<div id="clock" class="clock"></div>
   
-  <script>
   (function(){
     const nav = document.querySelector('.navbar');
     const toggle = document.querySelector('.nav-toggle');
@@ -676,6 +677,19 @@ document.querySelector('.nav-toggle').addEventListener('click', function() {
   this.setAttribute('aria-expanded', !expanded);
   navbar.classList.toggle('open');
 });
+</script>
+  <script>
+function updateClock() {
+  const clock = document.getElementById('clock');
+  if (!clock) return;
+  const now = new Date();
+  const options = { year:'numeric', month:'2-digit', day:'2-digit',
+                    hour:'2-digit', minute:'2-digit', second:'2-digit',
+                    hour12:false };
+  clock.textContent = now.toLocaleString('fa-IR', options);
+}
+setInterval(updateClock, 1000);
+updateClock();
 </script>
 </body>
 </html>
