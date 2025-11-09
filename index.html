@@ -668,5 +668,13 @@ body {padding-top: 30px;}
   })();
     
 </script>
+  <script>
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  const navbar = document.querySelector('.navbar');
+  const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+  this.setAttribute('aria-expanded', !expanded);
+  navbar.classList.toggle('open');
+});
+</script>
 </body>
 </html>
