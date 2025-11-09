@@ -623,7 +623,22 @@ body {padding-top: 30px;}
   تمامی حقوق وبسایت متعلق به دکتر فرزاد احمدی‌پور هدش می‌باشد و محفوظ است.<br>
   طراحی و توسعه در سال 1404
 </footer>
-</div>
+  
+ <!-- 🕒 ساعت و تاریخ ثابت پایین چپ -->
+<div id="clock" class="clock"></div>
+
+<script>
+// 🕒 JS ساعت و تاریخ ثابت
+function updateClock() {
+  const now = new Date();
+  const date = now.toLocaleDateString('fa-IR');
+  const time = now.toLocaleTimeString('fa-IR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  document.getElementById('clock').innerHTML = `${date} - ${time}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+  
   <script>
   (function(){
     const nav = document.querySelector('.navbar');
