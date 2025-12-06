@@ -641,41 +641,32 @@ body {padding-top: 30px;}
 </div>
   <script>
   (function(){
-    const nav = document.querySelector('.navbar');
-    const toggle = document.querySelector('.nav-toggle');
-    const navList = document.getElementById('nav-list');
+  const nav = document.querySelector('.navbar');
+  const toggle = document.querySelector('.nav-toggle');
+  const navList = document.getElementById('nav-list');
 
-    if (!nav || !toggle || !navList) return;
+  if (!nav || !toggle || !navList) return;
 
-    toggle.addEventListener('click', function(){
-      const isOpen = nav.classList.toggle('open');
-      // update aria
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      // prevent background scroll when menu open (optional)
-      if(isOpen) document.documentElement.style.overflow = 'hidden';
-      else document.documentElement.style.overflow = '';
+  toggle.addEventListener('click', function(){
+    const isOpen = nav.classList.toggle('open');
+    navList.classList.toggle('open'); // اضافه شد
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if(isOpen) document.documentElement.style.overflow = 'hidden';
+    else document.documentElement.style.overflow = '';
+  });
+
+  // Close menu when clicking a nav link (good UX)
+  navList.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        navList.classList.remove('open'); // اضافه شد
+        toggle.setAttribute('aria-expanded', 'false');
+        document.documentElement.style.overflow = '';
+      }
     });
-
-    // Close menu when clicking a nav link (good UX)
-    navList.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (nav.classList.contains('open')) {
-          nav.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-          document.documentElement.style.overflow = '';
-        }
-      });
-    });
-  })();
-    
-</script>
-  <script>
-document.querySelector('.nav-toggle').addEventListener('click', function() {
-  const navbar = document.querySelector('.navbar');
-  const expanded = this.getAttribute('aria-expanded') === 'true' || false;
-  this.setAttribute('aria-expanded', !expanded);
-  navbar.classList.toggle('open');
-});
+  });
+})();
 </script>
 </body>
 </html>
