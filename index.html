@@ -449,12 +449,15 @@ body {padding-top: 30px;}
 /* 🔽 ACCORDION – EXPERIENCE 🔽 */
 /* ============================= */
 
-.accordion-content {
-  display: none; /* ابتدا همه محتواها مخفی هستند */
-  padding: 15px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #ccc;
+/* استایل کلی هر آیتم آکاردئون */
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+/* هدر آکاردئون */
 .accordion-header {
   display: flex;
   justify-content: space-between;
@@ -464,15 +467,53 @@ body {padding-top: 30px;}
   padding: 12px 15px;
   cursor: pointer;
   font-weight: bold;
-  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
+
+.accordion-header:hover {
+  background-color: #004494;
+}
+
+/* دکمه توضیحات */
 .accordion-header button.accordion-toggle {
-  background: #fff;
+  background-color: #fff;
   color: #0056b3;
   border: none;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 5px 12px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-header button.accordion-toggle:hover {
+  background-color: #e6e6e6;
+}
+
+/* محتوای آکاردئون – ابتدا مخفی */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ccc;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* زمانی که باز است */
+.accordion-item.active .accordion-content {
+  padding: 15px;
+  max-height: 1000px; /* عدد بالا برای باز شدن کامل */
+}
+
+/* لیست داخل محتوا */
+.accordion-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.accordion-content li {
+  margin-bottom: 8px;
 }
   </style>
 </head>
@@ -512,7 +553,9 @@ body {padding-top: 30px;}
   <h2>اطلاعات تماس</h2>
   <p>📍 ایران، تهران</p>
   <p>📞 <a href="tel:09198885538">09198885538</a></p>
-  <p>📧 <a href="mailto:farzad_ahmadipour@yahoo.com">farzad_ahmadipour@yahoo.com</a></p> - <p>📧 <a href="mailto:farzad.ahmadipourhedesh@iau.ir">farzad.ahmadipour@iran.ir</a></p> - <p>📧 <a href="mailto:farzad.ahmadipourhedesh@iau.ir">farzad.ahmadipourhedesh@iau.ir</a></p>
+  <p>📧 <a href="mailto:farzad_ahmadipour@yahoo.com">farzad_ahmadipour@yahoo.com</a></p>
+  <p>📧 <a href="mailto:farzad.ahmadipourhedesh@iau.ir">farzad.ahmadipour@iran.ir</a></p>
+  <p>📧 <a href="mailto:farzad.ahmadipourhedesh@iau.ir">farzad.ahmadipourhedesh@iau.ir</a></p>
   <p><a class="download" href="Resume 2025 August.pdf" target="_blank">دانلود رزومه کامل (PDF)</a></p>
 </section>
 
@@ -526,17 +569,17 @@ body {padding-top: 30px;}
     <li>دیپلم فنی الکتروتکنیک - هنرستان فنی شهید چمران</li>
   </ul>
 </section>
-
+  
 <section id="jobs-accordion">
   <h2>💼 سوابق شغلی</h2>
 
   <!-- Job 1 -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <span>کارشناس مرکز داده (Data Center Specialist) – شرکت به‌پرداخت ملت</span>
-      <button class="accordion-toggle">توضیحات</button>
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">کارشناس مرکز داده (Data Center Specialist) – شرکت به‌پرداخت ملت</span>
+      <div class="accordion-btn">توضیحات</div>
     </div>
-    <div class="accordion-content">
+    <div class="job-description">
       <ul>
         <li>فعالیت در محیط Data Center بانکی با حساسیت و دسترس‌پذیری بالا (Mission-Critical)</li>
         <li>کار عملی با (EC12 , Z10) Mainframe IBM و سیستم‌عامل z/OS</li>
@@ -551,12 +594,12 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 2 -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <span>مدیرعامل و رئیس هیئت‌مدیره – مؤسسه کارآفرینی کارآوند</span>
-      <button class="accordion-toggle">توضیحات</button>
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">مدیرعامل و رئیس هیئت‌مدیره – مؤسسه کارآفرینی کارآوند</span>
+      <div class="accordion-btn">توضیحات</div>
     </div>
-    <div class="accordion-content">
+    <div class="job-description">
       <ul>
         <li>موسسه آموزشی و مهارتی در زمینه کسب‌و‌کار</li>
         <li>دارای مجوز رسمی از وزارت فرهنگ و ارشاد اسلامی</li>
@@ -567,12 +610,12 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 3 -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <span>استاد دانشگاه – دانشگاه آزاد اسلامی واحد علوم و فناوری پردیس</span>
-      <button class="accordion-toggle">توضیحات</button>
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">استاد دانشگاه – دانشگاه آزاد اسلامی واحد علوم و فناوری پردیس</span>
+      <div class="accordion-btn">توضیحات</div>
     </div>
-    <div class="accordion-content">
+    <div class="job-description">
       <ul>
         <li>دروس عمومی، پایه و تخصصی اصلی</li>
         <li>مقاطع کاردانی، کارشناسی و کارشناسی ارشد</li>
@@ -582,12 +625,12 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 4 -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <span>استاد دانشگاه – دانشگاه آزاد اسلامی واحد تهران شرق</span>
-      <button class="accordion-toggle">توضیحات</button>
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">استاد دانشگاه – دانشگاه آزاد اسلامی واحد تهران شرق</span>
+      <div class="accordion-btn">توضیحات</div>
     </div>
-    <div class="accordion-content">
+    <div class="job-description">
       <ul>
         <li>دروس عمومی، پایه و تخصصی اصلی</li>
         <li>مقاطع کاردانی، کارشناسی و کارشناسی ارشد</li>
@@ -597,12 +640,12 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 5 -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <span>داور علمی (Peer Reviewer) – Journal of Energy Storage</span>
-      <button class="accordion-toggle">توضیحات</button>
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">داور علمی (Peer Reviewer) – Journal of Energy Storage</span>
+      <div class="accordion-btn">توضیحات</div>
     </div>
-    <div class="accordion-content">
+    <div class="job-description">
       <ul>
         <li>داوری مقالات علمی در زمینه ذخیره‌سازی انرژی و انعطاف‌پذیری شبکه در سیستم‌های انرژی‌های تجدیدپذیر</li>
       </ul>
@@ -611,12 +654,12 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 6 -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <span>مهندس ارشد برق – شرکت بوم شهر</span>
-      <button class="accordion-toggle">توضیحات</button>
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">مهندس ارشد برق – شرکت بوم شهر</span>
+      <div class="accordion-btn">توضیحات</div>
     </div>
-    <div class="accordion-content">
+    <div class="job-description">
       <ul>
         <li>طراحی و اجرای تأسیسات برق</li>
         <li>طراحی و اجرای سیستم‌های هوشمند (BMS)</li>
@@ -627,12 +670,12 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 7 -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <span>مهندس ارشد برق – خانه هوشمند آرتمن</span>
-      <button class="accordion-toggle">توضیحات</button>
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">مهندس ارشد برق – خانه هوشمند آرتمن</span>
+      <div class="accordion-btn">توضیحات</div>
     </div>
-    <div class="accordion-content">
+    <div class="job-description">
       <ul>
         <li>طراحی و اجرای تأسیسات برق</li>
         <li>طراحی و اجرای سیستم‌های هوشمند (BMS)</li>
@@ -643,12 +686,12 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 8 -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <span>مهندس ارشد برق – لاوسن وود</span>
-      <button class="accordion-toggle">توضیحات</button>
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">مهندس ارشد برق – لاوسن وود</span>
+      <div class="accordion-btn">توضیحات</div>
     </div>
-    <div class="accordion-content">
+    <div class="job-description">
       <ul>
         <li>طراحی و اجرای نورپردازی</li>
         <li>طراحی و اجرای سیستم تاسیسات برق اداری، تجاری و مسکونی</li>
@@ -658,12 +701,12 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 9 -->
-  <div class="accordion-item">
-    <div class="accordion-header">
-      <span>مهندس برق – شرکت طراحان آلما</span>
-      <button class="accordion-toggle">توضیحات</button>
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">مهندس برق – شرکت طراحان آلما</span>
+      <div class="accordion-btn">توضیحات</div>
     </div>
-    <div class="accordion-content">
+    <div class="job-description">
       <ul>
         <li>اجرای تأسیسات برق</li>
         <li>طراحی و اجرای سیستم تاسیسات برق مسکونی</li>
@@ -671,6 +714,7 @@ body {padding-top: 30px;}
       <p><strong>بازه زمانی:</strong> ۱۳۹۲/۰۶ – ۱۳۹۵/۱۰</p>
     </div>
   </div>
+
 </section>
 
 <section id="courses">
@@ -823,7 +867,7 @@ body {padding-top: 30px;}
   طراحی و توسعه در سال 1404
 </footer>
 </div>
- <script>
+<script>
 (function() {
   const container = document.getElementById('jobs-accordion');
   if (!container) return;
@@ -831,19 +875,18 @@ body {padding-top: 30px;}
   const toggles = container.querySelectorAll('.accordion-toggle');
 
   toggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation(); // جلوگیری از تداخل با کلیک‌های دیگر
       const item = toggle.closest('.accordion-item');
-      const content = item.querySelector('.accordion-content');
-      const isOpen = content.style.display === 'block';
 
-      // بستن همه آیتم‌ها
-      container.querySelectorAll('.accordion-content').forEach(c => {
-        c.style.display = 'none';
-      });
-
-      // باز کردن آیتم انتخاب‌شده در صورت بسته بودن
-      if (!isOpen) {
-        content.style.display = 'block';
+      // اگر آیتم باز است، ببند
+      if (item.classList.contains('active')) {
+        item.classList.remove('active');
+      } else {
+        // بستن همه آیتم‌ها
+        container.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+        // باز کردن آیتم انتخاب‌شده
+        item.classList.add('active');
       }
     });
   });
