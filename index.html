@@ -445,82 +445,54 @@ body {padding-top: 30px;}
   font-size: 14px;
   z-index: 9999;    /* همیشه روی بقیه عناصر */
 }
-/* ============================= */
-/* 🔽 ACCORDION – EXPERIENCE 🔽 */
-/* ============================= */
-.job-description {
-    background-color: #007BFF; /* آبی */
-    color: white;              /* متن سفید */
-    border-radius: 10px;       /* گوشه‌های گرد */
-    padding: 15px;             /* فاصله داخلی */
-    margin-top: 10px;          /* فاصله از هدر شغل */
-  }
 
-/* استایل کلی هر آیتم آکاردئون */
-.accordion-item {
-  margin-bottom: 10px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* ============================= */
+/* 🔽 JOB ACCORDION – EXPERIENCE */
+/* ============================= */
+
+#jobs-accordion {
+  margin-top: 30px;
 }
 
-/* هدر آکاردئون */
+/* هر آیتم شغلی */
+.accordion-item {
+  margin-bottom: 12px;
+}
+
+/* هدر شغل */
 .accordion-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0056b3;
-  color: #fff;
-  padding: 12px 15px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  gap: 12px;
 }
 
-.accordion-header:hover {
-  background-color: #004494;
-}
-
-/* دکمه توضیحات */
-.accordion-header button.accordion-toggle {
-  background-color: #fff;
-  color: #0056b3;
+/* دکمه توضیحات – دقیقا مثل لینک‌ها */
+.accordion-toggle {
+  background-color: #1f5fbf; /* همان رنگ لینک‌ها */
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
-  padding: 5px 12px;
-  font-weight: bold;
+  border-radius: 6px;
+  padding: 5px 10px;        /* کوچکتر از لینک‌ها */
+  font-size: 13px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  transition: background-color 0.25s ease;
 }
 
-.accordion-header button.accordion-toggle:hover {
-  background-color: #e6e6e6;
+.accordion-toggle:hover {
+  background-color: #174a95;
 }
 
-/* محتوای آکاردئون – ابتدا مخفی */
+/* محتوای توضیحات (در ابتدا مخفی) */
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 15px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #ccc;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-}
-
-/* زمانی که باز است */
-.accordion-item.active .accordion-content {
-  padding: 15px;
-  max-height: 1000px; /* عدد بالا برای باز شدن کامل */
-}
-
-/* لیست داخل محتوا */
-.accordion-content ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.accordion-content li {
-  margin-bottom: 8px;
+  display: none;
+  margin-top: 8px;
+  padding: 12px 15px;
+  background-color: #f5f7fb;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.8;
 }
   </style>
 </head>
@@ -576,24 +548,23 @@ body {padding-top: 30px;}
     <li>دیپلم فنی الکتروتکنیک - هنرستان فنی شهید چمران</li>
   </ul>
 </section>
-  
-<section id="jobs-accordion">
+
+  <!-- <section id="jobs-accordion">
   <h2>💼 سوابق شغلی</h2>
 
   <!-- Job 1 -->
-  <div class="job-item">
-    <div class="job-header">
-      <span class="job-title">کارشناس مرکز داده (Data Center Specialist) – شرکت به‌پرداخت ملت</span>
-      <div class="accordion-btn">توضیحات</div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>کارشناس مرکز داده (Data Center Specialist) – شرکت به‌پرداخت ملت</span>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
-    <div class="job-description">
+    <div class="accordion-content">
       <ul>
-        <li>فعالیت در محیط Data Center بانکی با حساسیت و دسترس‌پذیری بالا (Mission-Critical)</li>
-        <li>کار عملی با (EC12 , Z10) Mainframe IBM و سیستم‌عامل z/OS</li>
-        <li>اجرای Job ها، پایش وضعیت سیستم و بررسی لاگ‌ها در محیط z/OS</li>
-        <li>مانیتورینگ و پایش سخت‌افزارهای دیتاسنتری شامل: Mainframe، Storage Systems، Tape Library</li>
-        <li>شناسایی، ثبت و گزارش خطاها، Alarmها و Incidentها</li>
-        <li>همکاری با تیم‌های فنی برای رفع اشکال و حفظ پایداری سرویس‌ها</li>
+        <li>فعالیت در محیط Data Center بانکی Mission-Critical</li>
+        <li>کار عملی با Mainframe IBM و سیستم‌عامل z/OS</li>
+        <li>اجرای Jobها، مانیتورینگ و بررسی لاگ‌ها</li>
+        <li>پایش Storage، Tape Library و زیرساخت دیتاسنتری</li>
+        <li>ثبت و پیگیری Incident و Alarmها</li>
         <li>فعالیت به‌صورت شیفتی (روز و شب)</li>
       </ul>
       <p><strong>بازه زمانی:</strong> ۱۴۰۳/۰۳ – اکنون</p>
@@ -601,14 +572,14 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 2 -->
-  <div class="job-item">
-    <div class="job-header">
-      <span class="job-title">مدیرعامل و رئیس هیئت‌مدیره – مؤسسه کارآفرینی کارآوند</span>
-      <div class="accordion-btn">توضیحات</div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>مدیرعامل و رئیس هیئت‌مدیره – مؤسسه کارآفرینی کارآوند</span>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
-    <div class="job-description">
+    <div class="accordion-content">
       <ul>
-        <li>موسسه آموزشی و مهارتی در زمینه کسب‌و‌کار</li>
+        <li>مدیریت و راهبری مؤسسه آموزشی و مهارتی</li>
         <li>دارای مجوز رسمی از وزارت فرهنگ و ارشاد اسلامی</li>
         <li>برگزاری دوره‌ها، وبینارها و رویدادهای تخصصی</li>
       </ul>
@@ -617,14 +588,14 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 3 -->
-  <div class="job-item">
-    <div class="job-header">
-      <span class="job-title">استاد دانشگاه – دانشگاه آزاد اسلامی واحد علوم و فناوری پردیس</span>
-      <div class="accordion-btn">توضیحات</div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>استاد دانشگاه – دانشگاه آزاد اسلامی واحد علوم و فناوری پردیس</span>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
-    <div class="job-description">
+    <div class="accordion-content">
       <ul>
-        <li>دروس عمومی، پایه و تخصصی اصلی</li>
+        <li>تدریس دروس عمومی، پایه و تخصصی</li>
         <li>مقاطع کاردانی، کارشناسی و کارشناسی ارشد</li>
       </ul>
       <p><strong>بازه زمانی:</strong> ۱۴۰۲/۰۶ – اکنون</p>
@@ -632,14 +603,14 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 4 -->
-  <div class="job-item">
-    <div class="job-header">
-      <span class="job-title">استاد دانشگاه – دانشگاه آزاد اسلامی واحد تهران شرق</span>
-      <div class="accordion-btn">توضیحات</div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>استاد دانشگاه – دانشگاه آزاد اسلامی واحد تهران شرق</span>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
-    <div class="job-description">
+    <div class="accordion-content">
       <ul>
-        <li>دروس عمومی، پایه و تخصصی اصلی</li>
+        <li>تدریس دروس عمومی، پایه و تخصصی</li>
         <li>مقاطع کاردانی، کارشناسی و کارشناسی ارشد</li>
       </ul>
       <p><strong>بازه زمانی:</strong> ۱۴۰۲/۰۶ – اکنون</p>
@@ -647,80 +618,82 @@ body {padding-top: 30px;}
   </div>
 
   <!-- Job 5 -->
-  <div class="job-item">
-    <div class="job-header">
-      <span class="job-title">داور علمی (Peer Reviewer) – Journal of Energy Storage</span>
-      <div class="accordion-btn">توضیحات</div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>داور علمی (Peer Reviewer) – Journal of Energy Storage</span>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
-    <div class="job-description">
+    <div class="accordion-content">
       <ul>
-        <li>داوری مقالات علمی در زمینه ذخیره‌سازی انرژی و انعطاف‌پذیری شبکه در سیستم‌های انرژی‌های تجدیدپذیر</li>
+        <li>داوری مقالات علمی در حوزه ذخیره‌سازی انرژی</li>
+        <li>بررسی انعطاف‌پذیری شبکه و سیستم‌های انرژی</li>
       </ul>
       <p><strong>بازه زمانی:</strong> ۱۴۰۴ – اکنون</p>
     </div>
   </div>
 
   <!-- Job 6 -->
-  <div class="job-item">
-    <div class="job-header">
-      <span class="job-title">مهندس ارشد برق – شرکت بوم شهر</span>
-      <div class="accordion-btn">توضیحات</div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>مهندس ارشد برق – شرکت بوم شهر</span>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
-    <div class="job-description">
+    <div class="accordion-content">
       <ul>
         <li>طراحی و اجرای تأسیسات برق</li>
-        <li>طراحی و اجرای سیستم‌های هوشمند (BMS)</li>
-        <li>طراحی و اجرای نورپردازی داخلی و فضای باز</li>
+        <li>طراحی و پیاده‌سازی سیستم‌های هوشمند (BMS)</li>
+        <li>طراحی نورپردازی داخلی و فضای باز</li>
       </ul>
       <p><strong>بازه زمانی:</strong> ۱۳۹۸/۰۵ – ۱۴۰۳/۰۸</p>
     </div>
   </div>
 
   <!-- Job 7 -->
-  <div class="job-item">
-    <div class="job-header">
-      <span class="job-title">مهندس ارشد برق – خانه هوشمند آرتمن</span>
-      <div class="accordion-btn">توضیحات</div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>مهندس ارشد برق – خانه هوشمند آرتمن</span>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
-    <div class="job-description">
+    <div class="accordion-content">
       <ul>
-        <li>طراحی و اجرای تأسیسات برق</li>
-        <li>طراحی و اجرای سیستم‌های هوشمند (BMS)</li>
-        <li>طراحی و اجرای نورپردازی داخلی و فضای باز</li>
+        <li>طراحی و اجرای تأسیسات برق ساختمانی</li>
+        <li>طراحی سیستم‌های هوشمند (BMS)</li>
+        <li>اجرای نورپردازی داخلی و خارجی</li>
       </ul>
       <p><strong>بازه زمانی:</strong> ۱۳۹۷/۰۳ – ۱۳۹۸/۰۴</p>
     </div>
   </div>
 
   <!-- Job 8 -->
-  <div class="job-item">
-    <div class="job-header">
-      <span class="job-title">مهندس ارشد برق – لاوسن وود</span>
-      <div class="accordion-btn">توضیحات</div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>مهندس ارشد برق – لاوسن وود</span>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
-    <div class="job-description">
+    <div class="accordion-content">
       <ul>
-        <li>طراحی و اجرای نورپردازی</li>
-        <li>طراحی و اجرای سیستم تاسیسات برق اداری، تجاری و مسکونی</li>
+        <li>طراحی و اجرای سیستم‌های نورپردازی</li>
+        <li>طراحی تأسیسات برق ساختمان‌های اداری و مسکونی</li>
       </ul>
       <p><strong>بازه زمانی:</strong> ۱۳۹۵/۱۱ – ۱۳۹۷/۰۲</p>
     </div>
   </div>
 
   <!-- Job 9 -->
-  <div class="job-item">
-    <div class="job-header">
-      <span class="job-title">مهندس برق – شرکت طراحان آلما</span>
-      <div class="accordion-btn">توضیحات</div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <span>مهندس برق – شرکت طراحان آلما</span>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
-    <div class="job-description">
+    <div class="accordion-content">
       <ul>
-        <li>اجرای تأسیسات برق</li>
-        <li>طراحی و اجرای سیستم تاسیسات برق مسکونی</li>
+        <li>اجرای تأسیسات برق ساختمانی</li>
+        <li>طراحی و اجرای برق پروژه‌های مسکونی</li>
       </ul>
       <p><strong>بازه زمانی:</strong> ۱۳۹۲/۰۶ – ۱۳۹۵/۱۰</p>
     </div>
   </div>
+
 </section>
 
 <section id="courses">
@@ -874,25 +847,26 @@ body {padding-top: 30px;}
 </footer>
 </div>
 <script>
-(function() {
+(function () {
   const container = document.getElementById('jobs-accordion');
   if (!container) return;
 
   const toggles = container.querySelectorAll('.accordion-toggle');
 
-  toggles.forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      e.stopPropagation(); // جلوگیری از تداخل با کلیک‌های دیگر
-      const item = toggle.closest('.accordion-item');
+  toggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.accordion-item');
+      const content = item.querySelector('.accordion-content');
+      const isOpen = content.style.display === 'block';
 
-      // اگر آیتم باز است، ببند
-      if (item.classList.contains('active')) {
-        item.classList.remove('active');
-      } else {
-        // بستن همه آیتم‌ها
-        container.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
-        // باز کردن آیتم انتخاب‌شده
-        item.classList.add('active');
+      /* بستن همه */
+      container.querySelectorAll('.accordion-content').forEach(c => {
+        c.style.display = 'none';
+      });
+
+      /* باز کردن فقط آیتم انتخاب‌شده */
+      if (!isOpen) {
+        content.style.display = 'block';
       }
     });
   });
