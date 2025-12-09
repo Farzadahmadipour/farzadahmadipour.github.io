@@ -464,22 +464,23 @@ body {padding-top: 30px;}
   font-family: 'IRANSans', Tahoma, sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #153E75;
-  background-color: #f8f9fa;
+  color: #153E75; /* رنگ متن رزومه */
+  background-color: #f2f4f8; /* جایگزین رنگ کادر رزومه */
   transition: background-color 0.3s, color 0.3s;
 }
 
 .accordion-header:hover {
   color: #1c5ed6;
-  background-color: #eef3fb;
+  background-color: #dce6f2; /* رنگ هاور شبیه رزومه */
 }
 
 .accordion-toggle {
-  background: none;
-  border: none;
-  font-size: 18px;
+  background-color: #f2f4f8; /* هم‌رنگ کادر */
+  border: 1px solid #cfd6e0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 .accordion-content {
@@ -499,7 +500,7 @@ body {padding-top: 30px;}
     padding: 0 12px 6px 12px;
   }
   .accordion-toggle {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
   </style>
@@ -564,7 +565,7 @@ body {padding-top: 30px;}
   <div class="accordion-item">
     <div class="accordion-header">
       <span>کارشناس مرکز داده (Data Center Specialist) – شرکت به‌پرداخت ملت</span>
-      <button class="accordion-toggle">▶</button>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
     <div class="accordion-content">
       <ul>
@@ -584,7 +585,7 @@ body {padding-top: 30px;}
   <div class="accordion-item">
     <div class="accordion-header">
       <span>مدیرعامل و رئیس هیئت‌مدیره – مؤسسه کارآفرینی کارآوند</span>
-      <button class="accordion-toggle">▶</button>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
     <div class="accordion-content">
       <ul>
@@ -600,7 +601,7 @@ body {padding-top: 30px;}
   <div class="accordion-item">
     <div class="accordion-header">
       <span>استاد دانشگاه – دانشگاه آزاد اسلامی واحد علوم و فناوری پردیس</span>
-      <button class="accordion-toggle">▶</button>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
     <div class="accordion-content">
       <ul>
@@ -615,7 +616,7 @@ body {padding-top: 30px;}
   <div class="accordion-item">
     <div class="accordion-header">
       <span>استاد دانشگاه – دانشگاه آزاد اسلامی واحد تهران شرق</span>
-      <button class="accordion-toggle">▶</button>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
     <div class="accordion-content">
       <ul>
@@ -630,7 +631,7 @@ body {padding-top: 30px;}
   <div class="accordion-item">
     <div class="accordion-header">
       <span>داور علمی (Peer Reviewer) – Journal of Energy Storage</span>
-      <button class="accordion-toggle">▶</button>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
     <div class="accordion-content">
       <ul>
@@ -644,7 +645,7 @@ body {padding-top: 30px;}
   <div class="accordion-item">
     <div class="accordion-header">
       <span>مهندس ارشد برق – شرکت بوم شهر</span>
-      <button class="accordion-toggle">▶</button>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
     <div class="accordion-content">
       <ul>
@@ -660,7 +661,7 @@ body {padding-top: 30px;}
   <div class="accordion-item">
     <div class="accordion-header">
       <span>مهندس ارشد برق – خانه هوشمند آرتمن</span>
-      <button class="accordion-toggle">▶</button>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
     <div class="accordion-content">
       <ul>
@@ -676,7 +677,7 @@ body {padding-top: 30px;}
   <div class="accordion-item">
     <div class="accordion-header">
       <span>مهندس ارشد برق – لاوسن وود</span>
-      <button class="accordion-toggle">▶</button>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
     <div class="accordion-content">
       <ul>
@@ -691,7 +692,7 @@ body {padding-top: 30px;}
   <div class="accordion-item">
     <div class="accordion-header">
       <span>مهندس برق – شرکت طراحان آلما</span>
-      <button class="accordion-toggle">▶</button>
+      <button class="accordion-toggle">توضیحات</button>
     </div>
     <div class="accordion-content">
       <ul>
@@ -702,7 +703,6 @@ body {padding-top: 30px;}
     </div>
   </div>
 </section>
-
 
 <section id="courses">
   <h2>👨‍🏫دروس تدریسی در دانشگاه آزاد اسلامی</h2>
@@ -868,14 +868,11 @@ body {padding-top: 30px;}
       // قبل از باز کردن، همه را ببند
       container.querySelectorAll('.accordion-content').forEach(c => {
         c.style.display = "none";
-        const toggleBtn = c.parentElement.querySelector('.accordion-toggle');
-        if(toggleBtn) toggleBtn.textContent = "▶";
       });
 
       // باز کردن مورد انتخاب شده
       if(!isVisible){
         content.style.display = "block";
-        btn.textContent = "▼";
       }
     });
   });
