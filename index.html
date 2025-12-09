@@ -445,48 +445,74 @@ body {padding-top: 30px;}
   font-size: 14px;
   z-index: 9999;    /* همیشه روی بقیه عناصر */
 }
-
-  /* ============================= */
+/* ============================= */
 /* 🔽 ACCORDION – EXPERIENCE 🔽 */
 /* ============================= */
 
 .accordion-item {
   border-bottom: 1px solid #e1e5ea;
   margin-bottom: 10px;
+  width: 100%;
 }
 
-.accordion-button {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 12px 8px;
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
   cursor: pointer;
+  background-color: #f8f9fa;
   font-family: 'IRANSans', Tahoma, sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #153E75;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: right;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.accordion-button:hover {
+.accordion-header:hover {
   color: #1c5ed6;
+  background-color: #eef3fb;
 }
 
-.accordion-panel {
+.accordion-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease;
-  padding: 0 8px;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 16px;
   font-size: 14px;
   color: #444;
 }
 
-.accordion-panel.open {
-  max-height: 600px;
-  padding: 8px;
+.accordion-item.active .accordion-content {
+  padding: 8px 16px;
+  max-height: 800px; /* ارتفاع حداکثر برای انیمیشن باز شدن */
+}
+
+@media (max-width: 768px) {
+  .accordion-header {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .accordion-content {
+    font-size: 13px;
+    padding: 0 12px;
+  }
+  .accordion-item.active .accordion-content {
+    padding: 6px 12px;
+  }
+  .accordion-toggle {
+    font-size: 16px;
+  }
 }
   </style>
 </head>
@@ -544,165 +570,147 @@ body {padding-top: 30px;}
 </section>
 
 <section id="jobs-accordion">
-  <h2>سوابق شغلی</h2>
+  <h2>💼 سوابق شغلی</h2>
 
   <!-- Job 1 -->
   <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false">
+    <div class="accordion-header">
       <span>کارشناس مرکز داده (Data Center Specialist) – شرکت به‌پرداخت ملت</span>
-      <span class="accordion-icon">▶</span>
-    </button>
-    <div class="accordion-panel" aria-hidden="true">
-      <div class="job-desc">
-        <ul>
-          <li>فعالیت در محیط Data Center بانکی با حساسیت و دسترس‌پذیری بالا (Mission-Critical)</li>
-          <li>کار عملی با (EC12 , Z10) Mainframe IBM و سیستم‌عامل z/OS</li>
-          <li>اجرای Job ها، پایش وضعیت سیستم و بررسی لاگ‌ها در محیط z/OS</li>
-          <li>مانیتورینگ و پایش سخت‌افزارهای دیتاسنتری شامل:Mainframe،Storage Systems،Tape Library</li>
-          <li>شناسایی، ثبت و گزارش خطاها، Alarmها و Incidentها</li>
-          <li>همکاری با تیم‌های فنی برای رفع اشکال و حفظ پایداری سرویس‌ها</li>
-          <li>فعالیت به‌صورت شیفتی (روز و شب)</li>
-        </ul>
-        <p><strong>بازه زمانی:</strong> ۱۴۰۳/۰۳ – اکنون</p>
-      </div>
+      <button class="accordion-toggle">▶</button>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>فعالیت در محیط Data Center بانکی با حساسیت و دسترس‌پذیری بالا (Mission-Critical)</li>
+        <li>کار عملی با (EC12 , Z10) Mainframe IBM و سیستم‌عامل z/OS</li>
+        <li>اجرای Job ها، پایش وضعیت سیستم و بررسی لاگ‌ها در محیط z/OS</li>
+        <li>مانیتورینگ و پایش سخت‌افزارهای دیتاسنتری شامل: Mainframe، Storage Systems، Tape Library</li>
+        <li>شناسایی، ثبت و گزارش خطاها، Alarmها و Incidentها</li>
+        <li>همکاری با تیم‌های فنی برای رفع اشکال و حفظ پایداری سرویس‌ها</li>
+        <li>فعالیت به‌صورت شیفتی (روز و شب)</li>
+      </ul>
+      <p><strong>بازه زمانی:</strong> ۱۴۰۳/۰۳ – اکنون</p>
     </div>
   </div>
 
   <!-- Job 2 -->
   <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false">
+    <div class="accordion-header">
       <span>مدیرعامل و رئیس هیئت‌مدیره – مؤسسه کارآفرینی کارآوند</span>
-      <span class="accordion-icon">▶</span>
-    </button>
-    <div class="accordion-panel" aria-hidden="true">
-      <div class="job-desc">
-        <ul>
-          <li>موسسه آموزشی و مهارتی در زمینه کسب‌و‌کار</li>
-          <li>دارای مجوز رسمی از وزارت فرهنگ و ارشاد اسلامی</li>
-          <li>برگزاری دوره‌ها، وبینارها و رویدادهای تخصصی</li>
-        </ul>
-        <p><strong>بازه زمانی:</strong> ۱۴۰۰/۰۲ – اکنون</p>
-      </div>
+      <button class="accordion-toggle">▶</button>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>موسسه آموزشی و مهارتی در زمینه کسب‌و‌کار</li>
+        <li>دارای مجوز رسمی از وزارت فرهنگ و ارشاد اسلامی</li>
+        <li>برگزاری دوره‌ها، وبینارها و رویدادهای تخصصی</li>
+      </ul>
+      <p><strong>بازه زمانی:</strong> ۱۴۰۰/۰۲ – اکنون</p>
     </div>
   </div>
 
   <!-- Job 3 -->
   <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false">
+    <div class="accordion-header">
       <span>استاد دانشگاه – دانشگاه آزاد اسلامی واحد علوم و فناوری پردیس</span>
-      <span class="accordion-icon">▶</span>
-    </button>
-    <div class="accordion-panel" aria-hidden="true">
-      <div class="job-desc">
-        <ul>
-          <li>دروس عمومی، پایه و تخصصی اصلی</li>
-          <li>مقاطع کاردانی، کارشناسی و کارشناسی ارشد</li>
-        </ul>
-        <p><strong>بازه زمانی:</strong> ۱۴۰۲/۰۶ – اکنون</p>
-      </div>
+      <button class="accordion-toggle">▶</button>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>دروس عمومی، پایه و تخصصی اصلی</li>
+        <li>مقاطع کاردانی، کارشناسی و کارشناسی ارشد</li>
+      </ul>
+      <p><strong>بازه زمانی:</strong> ۱۴۰۲/۰۶ – اکنون</p>
     </div>
   </div>
 
   <!-- Job 4 -->
   <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false">
+    <div class="accordion-header">
       <span>استاد دانشگاه – دانشگاه آزاد اسلامی واحد تهران شرق</span>
-      <span class="accordion-icon">▶</span>
-    </button>
-    <div class="accordion-panel" aria-hidden="true">
-      <div class="job-desc">
-        <ul>
-          <li>دروس عمومی، پایه و تخصصی اصلی</li>
-          <li>مقاطع کاردانی، کارشناسی و کارشناسی ارشد</li>
-        </ul>
-        <p><strong>بازه زمانی:</strong> ۱۴۰۲/۰۶ – اکنون</p>
-      </div>
+      <button class="accordion-toggle">▶</button>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>دروس عمومی، پایه و تخصصی اصلی</li>
+        <li>مقاطع کاردانی، کارشناسی و کارشناسی ارشد</li>
+      </ul>
+      <p><strong>بازه زمانی:</strong> ۱۴۰۲/۰۶ – اکنون</p>
     </div>
   </div>
-  
+
   <!-- Job 5 -->
   <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false">
+    <div class="accordion-header">
       <span>داور علمی (Peer Reviewer) – Journal of Energy Storage</span>
-      <span class="accordion-icon">▶</span>
-    </button>
-    <div class="accordion-panel" aria-hidden="true">
-      <div class="job-desc">
-        <ul>
-          <li>داوری مقالات علمی در زمینه ذخیره‌سازی انرژی و انعطاف‌پذیری شبکه در سیستم‌های انرژی‌های تجدیدپذیر</li>
-        </ul>
-        <p><strong>بازه زمانی:</strong> ۱۴۰۴ – اکنون</p>
-      </div>
+      <button class="accordion-toggle">▶</button>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>داوری مقالات علمی در زمینه ذخیره‌سازی انرژی و انعطاف‌پذیری شبکه در سیستم‌های انرژی‌های تجدیدپذیر</li>
+      </ul>
+      <p><strong>بازه زمانی:</strong> ۱۴۰۴ – اکنون</p>
     </div>
   </div>
 
   <!-- Job 6 -->
   <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false">
+    <div class="accordion-header">
       <span>مهندس ارشد برق – شرکت بوم شهر</span>
-      <span class="accordion-icon">▶</span>
-    </button>
-    <div class="accordion-panel" aria-hidden="true">
-      <div class="job-desc">
-        <ul>
-          <li>طراحی و اجرای تأسیسات برق</li>
-          <li>طراحی و اجرای سیستم‌های هوشمند (BMS)</li>
-          <li>طراحی و اجرای نورپردازی داخلی و فضای باز</li>
-        </ul>
-        <p><strong>بازه زمانی:</strong> ۱۳۹۸/۰۵ – ۱۴۰۳/۰۸</p>
-      </div>
+      <button class="accordion-toggle">▶</button>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>طراحی و اجرای تأسیسات برق</li>
+        <li>طراحی و اجرای سیستم‌های هوشمند (BMS)</li>
+        <li>طراحی و اجرای نورپردازی داخلی و فضای باز</li>
+      </ul>
+      <p><strong>بازه زمانی:</strong> ۱۳۹۸/۰۵ – ۱۴۰۳/۰۸</p>
     </div>
   </div>
 
   <!-- Job 7 -->
   <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false">
+    <div class="accordion-header">
       <span>مهندس ارشد برق – خانه هوشمند آرتمن</span>
-      <span class="accordion-icon">▶</span>
-    </button>
-    <div class="accordion-panel" aria-hidden="true">
-      <div class="job-desc">
-        <ul>
-          <li>طراحی و اجرای تأسیسات برق</li>
-          <li>طراحی و اجرای سیستم‌های هوشمند (BMS)</li>
-          <li>طراحی و اجرای نورپردازی داخلی و فضای باز</li>
-        </ul>
-        <p><strong>بازه زمانی:</strong> ۱۳۹۷/۰۳ – ۱۳۹۸/۰۴</p>
-      </div>
+      <button class="accordion-toggle">▶</button>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>طراحی و اجرای تأسیسات برق</li>
+        <li>طراحی و اجرای سیستم‌های هوشمند (BMS)</li>
+        <li>طراحی و اجرای نورپردازی داخلی و فضای باز</li>
+      </ul>
+      <p><strong>بازه زمانی:</strong> ۱۳۹۷/۰۳ – ۱۳۹۸/۰۴</p>
     </div>
   </div>
 
   <!-- Job 8 -->
   <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false">
+    <div class="accordion-header">
       <span>مهندس ارشد برق – لاوسن وود</span>
-      <span class="accordion-icon">▶</span>
-    </button>
-    <div class="accordion-panel" aria-hidden="true">
-      <div class="job-desc">
-        <ul>
-          <li>طراحی و اجرای نور پردازی</li>
-          <li>طراحی و اجرای سیستم تاسیسات برق اداری، تجاری و مسکونی</li>
-        </ul>
-        <p><strong>بازه زمانی:</strong> ۱۳۹۵/۱۱ – ۱۳۹۷/۰۲</p>
-      </div>
+      <button class="accordion-toggle">▶</button>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>طراحی و اجرای نورپردازی</li>
+        <li>طراحی و اجرای سیستم تاسیسات برق اداری، تجاری و مسکونی</li>
+      </ul>
+      <p><strong>بازه زمانی:</strong> ۱۳۹۵/۱۱ – ۱۳۹۷/۰۲</p>
     </div>
   </div>
 
   <!-- Job 9 -->
   <div class="accordion-item">
-    <button class="accordion-button" aria-expanded="false">
+    <div class="accordion-header">
       <span>مهندس برق – شرکت طراحان آلما</span>
-      <span class="accordion-icon">▶</span>
-    </button>
-    <div class="accordion-panel" aria-hidden="true">
-      <div class="job-desc">
-        <ul>
-          <li>اجرای تأسیسات برق</li>
-          <li>طراحی و اجرای سیستم تاسیسات برق مسکونی</li>
-        </ul>
-        <p><strong>بازه زمانی:</strong> ۱۳۹۲/۰۶ – ۱۳۹۵/۱۰</p>
-      </div>
+      <button class="accordion-toggle">▶</button>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>اجرای تأسیسات برق</li>
+        <li>طراحی و اجرای سیستم تاسیسات برق مسکونی</li>
+      </ul>
+      <p><strong>بازه زمانی:</strong> ۱۳۹۲/۰۶ – ۱۳۹۵/۱۰</p>
     </div>
   </div>
 
@@ -858,95 +866,40 @@ body {padding-top: 30px;}
   طراحی و توسعه در سال 1404
 </footer>
 </div>
-  <script>
-  (function(){
-  const nav = document.querySelector('.navbar');
-  const toggle = document.querySelector('.nav-toggle');
-  const navList = document.getElementById('nav-list');
-
-  if (!nav || !toggle || !navList) return;
-
-  toggle.addEventListener('click', function(){
-    const isOpen = nav.classList.toggle('open');
-    navList.classList.toggle('open'); // اضافه شد
-    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    if(isOpen) document.documentElement.style.overflow = 'hidden';
-    else document.documentElement.style.overflow = '';
-  });
-
-  // Close menu when clicking a nav link (good UX)
-  navList.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      if (nav.classList.contains('open')) {
-        nav.classList.remove('open');
-        navList.classList.remove('open'); // اضافه شد
-        toggle.setAttribute('aria-expanded', 'false');
-        document.documentElement.style.overflow = '';
-      }
-    });
-  });
-})();
-</script>
-
-  <script>
+ <script>
 (function(){
   const container = document.getElementById('jobs-accordion');
   if(!container) return;
 
-  // اگر می‌خواهی محتوای data-desc به صورت خودکار در .job-desc قرار بگیرد:
-  container.querySelectorAll('.accordion-item').forEach(item=>{
-    const d = item.dataset.desc;
-    if(d){
-      const descEl = item.querySelector('.job-desc');
-      if(descEl) descEl.textContent = d;
-    }
-  });
-
-  container.querySelectorAll('.accordion-button').forEach(btn=>{
-    btn.addEventListener('click', function(){
+  // انتخاب همه دکمه‌های toggle در هر شغل
+  container.querySelectorAll('.accordion-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
       const item = btn.closest('.accordion-item');
-      const panel = item.querySelector('.accordion-panel');
-      const isOpen = panel.classList.contains('open');
+      const content = item.querySelector('.accordion-content');
+      const isOpen = item.classList.contains('active');
 
-      // --- اگر می‌خواهی فقط یک آکاردئون همزمان باز باشد، ابتدا بستن همه ---
-      container.querySelectorAll('.accordion-panel.open').forEach(p=>{
-        p.classList.remove('open');
-        p.style.maxHeight = null;
-        p.previousElementSibling && p.previousElementSibling.setAttribute('aria-expanded','false');
-        p.setAttribute('aria-hidden','true');
-        const icon = p.previousElementSibling && p.previousElementSibling.querySelector('.accordion-icon');
-        if(icon) icon.style.transform = 'rotate(0deg)';
+      // اگر می‌خوای فقط یک آکاردئون همزمان باز باشد، ابتدا همه را ببند
+      container.querySelectorAll('.accordion-item.active').forEach(activeItem => {
+        activeItem.classList.remove('active');
+        const activeContent = activeItem.querySelector('.accordion-content');
+        if(activeContent) activeContent.style.maxHeight = null;
+        const activeBtn = activeItem.querySelector('.accordion-toggle');
+        if(activeBtn) activeBtn.textContent = "▶";
       });
-      // ----------------------------------------------
 
-      // سپس برای مورد انتخاب شده باز/بسته کن
+      // باز/بسته کردن مورد انتخاب شده
       if(!isOpen){
-        panel.classList.add('open');
-        panel.style.maxHeight = panel.scrollHeight + 40 + "px"; // هم برای انیمیشن
-        btn.setAttribute('aria-expanded','true');
-        panel.setAttribute('aria-hidden','false');
-        const icon = btn.querySelector('.accordion-icon');
-        if(icon) icon.style.transform = 'rotate(90deg)';
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + "px"; // انیمیشن باز شدن
+        btn.textContent = "▼"; // آیکون باز
       } else {
-        panel.classList.remove('open');
-        panel.style.maxHeight = null;
-        btn.setAttribute('aria-expanded','false');
-        panel.setAttribute('aria-hidden','true');
-        const icon = btn.querySelector('.accordion-icon');
-        if(icon) icon.style.transform = 'rotate(0deg)';
+        item.classList.remove('active');
+        content.style.maxHeight = null;
+        btn.textContent = "▶"; // آیکون بسته
       }
     });
   });
 
-  // دسترسی کیبورد (Enter/Space برای دکمه‌ها)
-  container.querySelectorAll('.accordion-button').forEach(btn=>{
-    btn.addEventListener('keydown', (e)=>{
-      if(e.key === 'Enter' || e.key === ' '){
-        e.preventDefault();
-        btn.click();
-      }
-    });
-  });
 })();
 </script>
 </body>
