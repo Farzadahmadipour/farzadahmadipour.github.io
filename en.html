@@ -582,6 +582,13 @@
     #jobs-list.expanded li:nth-child(n+7) {
       display: list-item;
     }
+    /* Commendations: hide from item 4 onward */
+#commendations-list li:nth-child(n+4) {
+  display: none;
+}
+#commendations-list.expanded li:nth-child(n+4) {
+  display: list-item;
+}
     .collapsible-content {
       display: none;
       margin-top: 8px;
@@ -722,6 +729,7 @@
       <li><a href="#edu">Education</a></li>
       <li><a href="#courses">Teaching</a></li>
       <li><a href="#awards">Awards</a></li>
+      <li><a href="#commendations">Commendations</a></li>
       <li><a href="#iau">IAU</a></li>
       <li><a href="#interviews">Media</a></li>
       <li><a href="#psychology">Tests</a></li>
@@ -905,7 +913,19 @@
         <button class="btn-show-more" onclick="toggleList(this, 'awards-list')">Show More ▼</button>
       </section>
 
-
+<section id="commendations">
+        <h2>📜 Commendations</h2>
+        <ul class="show-more-list" id="commendations-list">
+          <li>Organizer of the Karavand Autumn Handicrafts and Entrepreneurship Exhibition - <a href="https://farzadahmadipour.github.io/Exhibition.pdf" target="_blank">View file</a></li>
+          <li>Participation in the National Imamate and Mahdism Festival - <a href="https://farzadahmadipour.github.io/hedayat.pdf" target="_blank">View file</a></li>
+          <li>Participation in the Islamic Azad University Nationwide Roshd Festival and winning first place nationally - <a href="https://farzadahmadipour.github.io/jashnvareyeroshd.pdf" target="_blank">View file</a></li>
+          <li>Managing Director of the Karavand Journal - <a href="https://farzadahmadipour.github.io/nashriye2.pdf" target="_blank">View file</a></li>
+          <li>Participation in the Islamic Azad University National Asr-e Omid Event - <a href="https://farzadahmadipour.github.io/omid.pdf" target="_blank">View file</a></li>
+          <li>Participation in the Talent Discovery Ceremony of the Damavand County Education Department - <a href="https://farzadahmadipour.github.io/MinistryofEducation.pdf" target="_blank">View file</a></li>
+         </ul>
+        <button class="btn-show-more" onclick="toggleList(this, 'commendations-list')">Show more ▼</button>
+      </section>
+      
       <section id="iau">
         <h2>🏛️ Executive Roles at Islamic Azad University</h2>
         <ul class="show-more-list" id="iau-list">
