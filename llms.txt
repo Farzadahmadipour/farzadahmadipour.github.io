@@ -1,0 +1,55 @@
+# Dr. Farzad Ahmadipour Hedesh (دکتر فرزاد احمدی‌پور هدش)
+
+> Official bilingual (Persian/English) academic and professional website of Dr. Farzad Ahmadipour Hedesh: Ph.D. in Electrical Power Engineering, university lecturer at Islamic Azad University, peer reviewer for the Journal of Energy Storage (Elsevier), and CEO of Karavand Entrepreneurship Institute. Based in Tehran, Iran.
+
+The site is a single-page profile available in two language versions. Both versions contain the same sections: About, Publications, Work Experience, Education, Courses Taught, Certificates & Awards, Commendations, Executive Roles at Islamic Azad University, Media Interviews, and Contact/Links. Persian (fa) is the default version; English (en) is the translation.
+
+## Main pages
+
+- [Persian version (default)](https://farzadahmadipour.github.io/): Full profile in Persian
+- [English version](https://farzadahmadipour.github.io/en.html): Full profile in English
+
+## Resume and documents
+
+- [Resume (PDF, June 2026)](https://farzadahmadipour.github.io/Resume-june-2026.pdf): Full resume
+- [Peer review history (PDF)](https://farzadahmadipour.github.io/MyReviewHistory.pdf): Record of reviews for the Journal of Energy Storage
+- [Cultural CV (PDF)](https://farzadahmadipour.github.io/farhangi.pdf): Cultural and executive activities at Islamic Azad University (Persian)
+
+## Research focus
+
+Multi-energy microgrids, energy storage systems, coordination of integrated electricity and gas networks, optimization with carbon emission considerations, smart grids, and renewable energy integration.
+
+Publications listed on the site:
+- A Decentralized Model for Coordinating Multi-Energy Microgrids in Integrated Electricity and Gas Networks with Carbon Emission Considerations (Journal of Energy Storage)
+- Market-Based Coordination of Decentralized Multi-Energy Microgrids Using Energy Storage Systems and Electric Vehicle Batteries under Dynamic Carbon Pricing (Journal of Energy Storage)
+- Book: Cathodic Protection and Thermoelectric Generator with Ammonia-Based Cooling System ([ResearchGate](https://www.researchgate.net/publication/394433126_Cathodic_Protection_and_Thermoelectric_Generator_with_Ammonia-Based_Cooling_System))
+- Karavand Entrepreneurship Journal, Islamic Azad University (editor-in-chief / managing director) ([journal page](https://stumag.iau.ir/publications/1980/))
+
+## Professional roles
+
+- Ph.D. in Electrical Power Engineering, Islamic Azad University, Damavand Branch (from 2019)
+- University Lecturer, Islamic Azad University: Pardis Science & Technology Branch and East Tehran Branch (from 2023). Courses include Smart Power Grids, Power Systems Analysis, Insulators & High Voltage, Electrical Machines, Electrical Safety, and Technical Illumination.
+- Peer Reviewer, Journal of Energy Storage (Elsevier), from July 2025
+- CEO and Chairman of the Board, Karavand Entrepreneurship Institute (from 2021), a licensed educational and skills-training institute
+- Previous: Operations, Security & IT Specialist at Behpardakht Mellat Bank data center (2024-2025); electrical engineer in building electrical and smart-building design (2013-2024)
+
+## Academic and professional profiles
+
+- [ORCID](https://orcid.org/0009-0003-4084-4152): 0009-0003-4084-4152
+- [ResearchGate](https://www.researchgate.net/profile/Farzad-Ahmadipour-Hedesh)
+- [LinkedIn](https://www.linkedin.com/in/farzad-ahmadipour-hedesh/)
+- [Peeref reviewer profile](https://www.peeref.com/reviewer/profile/q49N267EN7dx)
+- [Wikidata](https://www.wikidata.org/wiki/Q140521083)
+- [ROR (Islamic Azad University)](https://ror.org/0516eyx49)
+- [Karavand Entrepreneurship Institute](https://damavand.iau.ir/karavand)
+
+## Contact
+
+- Email: farzad_ahmadipour@yahoo.com
+- Location: Tehran, Iran
+
+## Optional
+
+- [Karavand Instagram](https://www.instagram.com/kar.avand/)
+- [Personal Instagram](https://www.instagram.com/farzad.ahmadipour/)
+- [X (Twitter)](https://x.com/farzadahmadipor)
